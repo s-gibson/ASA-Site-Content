@@ -1,3 +1,9 @@
+################################## 
+##  ASA NFL Site Content        ##
+##  Top Positional Probability  ##
+##  Stewart Gibson              ##
+##  8/31/17                     ##
+##################################
 
 ### Import data, separate into 2016 and 2015 datasets
 load("~/Documents/ASA/ASA Site Content/NFL/data/clean_data.RData")
@@ -43,187 +49,89 @@ for (i in c(1:nrow(Top.QB.probs))) {
 Top.QB.probs <- Top.QB.probs[order(Top.QB.probs$Prob,decreasing = T),]
 write.csv(Top.QB.probs, file = "NFL/TPPs/QB.csv", row.names = F)
 
-### First Base (1B)
-uniq.1B <- unique(DraftKings.players$Name[which(DraftKings.players$Position == "1B" |
-                                                       DraftKings.players$Position == "1B/2B" |
-                                                       DraftKings.players$Position == "1B/3B" |
-                                                       DraftKings.players$Position == "1B/OF" )])
-samp.1B <- matrix(NA, nrow = 5000, ncol = length(uniq.1B))
-colnames(samp.1B) <- uniq.1B
-for (i in c(1:length(uniq.1B))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.1B[i]) &
-                           Fantasy.2016$GS == 1),]
+### Running Back (RB)
+uniq.RB <- unique(DraftKings.players$Name[which(DraftKings.players$Pos == "RB")])
+samp.RB <- matrix(NA, nrow = iter, ncol = length(uniq.RB))
+colnames(samp.RB) <- uniq.RB
+for (i in c(1:length(uniq.RB))) {
+  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.RB[i])),]
   if (nrow(dat) > 1) {
-    player.dens <- density(dat$DK_points)
+    player.dens <- density(dat$DK.points)
     
-    samp.1B[,i] <- sample(player.dens$x, 5000, replace = T, prob = player.dens$y)
-  } else (samp.1B[,i] <- 0)
+    samp.RB[,i] <- sample(player.dens$x, iter, replace = T, prob = player.dens$y)
+  } else (samp.RB[,i] <- 0)
 }
 
-Top.1B <- matrix(NA, nrow = 5000, ncol = 1)
-for (i in c(1:5000)) {
-  Top.1B[i,1] <- which.max(samp.1B[i,])
+Top.RB <- matrix(NA, nrow = iter, ncol = 1)
+for (i in c(1:iter)) {
+  Top.RB[i,1] <- which.max(samp.RB[i,])
 }
 
-Top.1B.probs <- data.frame(Player = uniq.1B, Prob = NA)
-for (i in c(1:nrow(Top.1B.probs))) {
-  Top.1B.probs$Prob[i] <- length(Top.1B[which(Top.1B[,1] == i)])/5000
+Top.RB.probs <- data.frame(Player = uniq.RB, Matchup = NA, Salary = NA, Prob = NA)
+for (i in c(1:nrow(Top.RB.probs))) {
+  Top.RB.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
+                                                              Top.RB.probs$Player[i])]
+  Top.RB.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
+                                                                              Top.RB.probs$Player[i])])
+  Top.RB.probs$Prob[i] <- length(Top.RB[which(Top.RB[,1] == i)])/iter
 }
-Top.1B.probs <- Top.1B.probs[order(Top.1B.probs$Prob,decreasing = T),]
+Top.RB.probs <- Top.RB.probs[order(Top.RB.probs$Prob,decreasing = T),]
+write.csv(Top.RB.probs, file = "NFL/TPPs/RB.csv", row.names = F)
 
-write.csv(Top.1B.probs, file = "~/Documents/ASA/MLB Positional Probability/First Base.csv")
-
-### Second Base (2B)
-uniq.2B <- unique(DraftKings.players$Name[which(DraftKings.players$Position == "2B" |
-                                               DraftKings.players$Position == "2B/3B" |
-                                               DraftKings.players$Position == "2B/C" |
-                                               DraftKings.players$Position == "2B/OF" |
-                                               DraftKings.players$Position == "2B/SS")])
-samp.2B <- matrix(NA, nrow = 5000, ncol = length(uniq.2B))
-colnames(samp.2B) <- uniq.2B
-for (i in c(1:length(uniq.2B))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.2B[i]) &
-                           Fantasy.2016$GS == 1),]
+### Wide Receiver (WR)
+uniq.WR <- unique(DraftKings.players$Name[which(DraftKings.players$Pos == "WR")])
+samp.WR <- matrix(NA, nrow = iter, ncol = length(uniq.WR))
+colnames(samp.WR) <- uniq.WR
+for (i in c(1:length(uniq.WR))) {
+  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.WR[i])),]
   if (nrow(dat) > 1) {
-    player.dens <- density(dat$DK_points)
+    player.dens <- density(dat$DK.points)
     
-    samp.2B[,i] <- sample(player.dens$x, 5000, replace = T, prob = player.dens$y)
-  } else (samp.2B[,i] <- 0)
+    samp.WR[,i] <- sample(player.dens$x, iter, replace = T, prob = player.dens$y)
+  } else (samp.WR[,i] <- 0)
 }
 
-Top.2B <- matrix(NA, nrow = 5000, ncol = 1)
-for (i in c(1:5000)) {
-  Top.2B[i,1] <- which.max(samp.2B[i,])
+Top.WR <- matrix(NA, nrow = iter, ncol = 1)
+for (i in c(1:iter)) {
+  Top.WR[i,1] <- which.max(samp.WR[i,])
 }
 
-Top.2B.probs <- data.frame(Player = uniq.2B, Prob = NA)
-for (i in c(1:nrow(Top.2B.probs))) {
-  Top.2B.probs$Prob[i] <- length(Top.2B[which(Top.2B[,1] == i)])/5000
+Top.WR.probs <- data.frame(Player = uniq.WR, Matchup = NA, Salary = NA, Prob = NA)
+for (i in c(1:nrow(Top.WR.probs))) {
+  Top.WR.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
+                                                              Top.WR.probs$Player[i])]
+  Top.WR.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
+                                                                              Top.WR.probs$Player[i])])
+  Top.WR.probs$Prob[i] <- length(Top.WR[which(Top.WR[,1] == i)])/iter
 }
-Top.2B.probs <- Top.2B.probs[order(Top.2B.probs$Prob,decreasing = T),]
+Top.WR.probs <- Top.WR.probs[order(Top.WR.probs$Prob,decreasing = T),]
+write.csv(Top.WR.probs, file = "NFL/TPPs/WR.csv", row.names = F)
 
-write.csv(Top.2B.probs, file = "~/Documents/ASA/MLB Positional Probability/Second Base.csv")
-
-### Third Base (3B)
-uniq.3B <- unique(DraftKings.players$Name[which(DraftKings.players$Position == "3B" |
-                                               DraftKings.players$Position == "3B/OF" |
-                                               DraftKings.players$Position == "3B/SS" |
-                                               DraftKings.players$Position == "2B/3B" |
-                                               DraftKings.players$Position == "1B/3B")])
-samp.3B <- matrix(NA, nrow = 5000, ncol = length(uniq.3B))
-colnames(samp.3B) <- uniq.3B
-for (i in c(1:length(uniq.3B))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.3B[i]) &
-                           Fantasy.2016$GS == 1),]
+### Tight End (TE)
+uniq.TE <- unique(DraftKings.players$Name[which(DraftKings.players$Pos == "TE")])
+samp.TE <- matrix(NA, nrow = iter, ncol = length(uniq.TE))
+colnames(samp.TE) <- uniq.TE
+for (i in c(1:length(uniq.TE))) {
+  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.TE[i])),]
   if (nrow(dat) > 1) {
-    player.dens <- density(dat$DK_points)
+    player.dens <- density(dat$DK.points)
     
-    samp.3B[,i] <- sample(player.dens$x, 5000, replace = T, prob = player.dens$y)
-  } else (samp.3B[,i] <- 0)
+    samp.TE[,i] <- sample(player.dens$x, iter, replace = T, prob = player.dens$y)
+  } else (samp.TE[,i] <- 0)
 }
 
-Top.3B <- matrix(NA, nrow = 5000, ncol = 1)
-for (i in c(1:5000)) {
-  Top.3B[i,1] <- which.max(samp.3B[i,])
+Top.TE <- matrix(NA, nrow = iter, ncol = 1)
+for (i in c(1:iter)) {
+  Top.TE[i,1] <- which.max(samp.TE[i,])
 }
 
-Top.3B.probs <- data.frame(Player = uniq.3B, Prob = NA)
-for (i in c(1:nrow(Top.3B.probs))) {
-  Top.3B.probs$Prob[i] <- length(Top.3B[which(Top.3B[,1] == i)])/5000
+Top.TE.probs <- data.frame(Player = uniq.TE, Matchup = NA, Salary = NA, Prob = NA)
+for (i in c(1:nrow(Top.TE.probs))) {
+  Top.TE.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
+                                                              Top.TE.probs$Player[i])]
+  Top.TE.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
+                                                                              Top.TE.probs$Player[i])])
+  Top.TE.probs$Prob[i] <- length(Top.TE[which(Top.TE[,1] == i)])/iter
 }
-Top.3B.probs <- Top.3B.probs[order(Top.3B.probs$Prob,decreasing = T),]
-
-write.csv(Top.3B.probs, file = "~/Documents/ASA/MLB Positional Probability/Third Base.csv")
-
-### Shortstop (SS)
-uniq.SS <- unique(DraftKings.players$Name[which(DraftKings.players$Position == "SS" |
-                                               DraftKings.players$Position == "2B/SS" |
-                                               DraftKings.players$Position == "3B/SS" |
-                                               DraftKings.players$Position == "OF/SS" )])
-samp.SS <- matrix(NA, nrow = 5000, ncol = length(uniq.SS))
-colnames(samp.SS) <- uniq.SS
-for (i in c(1:length(uniq.SS))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.SS[i]) &
-                           Fantasy.2016$GS == 1),]
-  if (nrow(dat) > 1) {
-    player.dens <- density(dat$DK_points)
-    
-    samp.SS[,i] <- sample(player.dens$x, 5000, replace = T, prob = player.dens$y)
-  } else (samp.SS[,i] <- 0)
-}
-
-Top.SS <- matrix(NA, nrow = 5000, ncol = 1)
-for (i in c(1:5000)) {
-  Top.SS[i,1] <- which.max(samp.SS[i,])
-}
-
-Top.SS.probs <- data.frame(Player = uniq.SS, Prob = NA)
-for (i in c(1:nrow(Top.SS.probs))) {
-  Top.SS.probs$Prob[i] <- length(Top.SS[which(Top.SS[,1] == i)])/5000
-}
-Top.SS.probs <- Top.SS.probs[order(Top.SS.probs$Prob,decreasing = T),]
-
-write.csv(Top.SS.probs, file = "~/Documents/ASA/MLB Positional Probability/Shortstop.csv")
-
-### Outfield (OF)
-uniq.OF <- unique(DraftKings.players$Name[which(DraftKings.players$Position == "OF" |
-                                               DraftKings.players$Position == "1B/OF" |
-                                               DraftKings.players$Position == "2B/OF" |
-                                               DraftKings.players$Position == "3B/OF" |
-                                               DraftKings.players$Position == "C/OF" |
-                                               DraftKings.players$Position == "OF/SS")])
-samp.OF <- matrix(NA, nrow = 5000, ncol = length(uniq.OF))
-colnames(samp.OF) <- uniq.OF
-for (i in c(1:length(uniq.OF))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.OF[i]) &
-                           Fantasy.2016$GS == 1),]
-  if (nrow(dat) > 1) {
-    player.dens <- density(dat$DK_points)
-    
-    samp.OF[,i] <- sample(player.dens$x, 5000, replace = T, prob = player.dens$y)
-  } else (samp.OF[,i] <- 0)
-}
-
-Top.OF <- matrix(NA, nrow = 5000, ncol = 1)
-for (i in c(1:5000)) {
-  Top.OF[i,1] <- which.max(samp.OF[i,])
-}
-
-Top.OF.probs <- data.frame(Player = uniq.OF, Prob = NA)
-for (i in c(1:nrow(Top.OF.probs))) {
-  Top.OF.probs$Prob[i] <- length(Top.OF[which(Top.OF[,1] == i)])/5000
-}
-Top.OF.probs <- Top.OF.probs[order(Top.OF.probs$Prob,decreasing = T),]
-
-write.csv(Top.OF.probs, file = "~/Documents/ASA/MLB Positional Probability/Outfield.csv")
-
-### Starting Pitcher (SP)
-uniq.SP <- unique(DraftKings.players$Name[which(DraftKings.players$Position == "SP" |
-                                               DraftKings.players$Position == "SP/2B" |
-                                               DraftKings.players$Position == "SP/3B" |
-                                               DraftKings.players$Position == "SP/OF" )])
-samp.SP <- matrix(NA, nrow = 5000, ncol = length(uniq.SP))
-colnames(samp.SP) <- uniq.SP
-for (i in c(1:length(uniq.SP))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.SP[i]) &
-                           Fantasy.2016$GS == 1),]
-  if (nrow(dat) > 1) {
-    player.dens <- density(dat$DK_points)
-    
-    samp.SP[,i] <- sample(player.dens$x, 5000, replace = T, prob = player.dens$y)
-  } else (samp.SP[,i] <- 0)
-}
-
-Top.SP <- matrix(NA, nrow = 5000, ncol = 1)
-for (i in c(1:5000)) {
-  Top.SP[i,1] <- which.max(samp.SP[i,])
-}
-
-Top.SP.probs <- data.frame(Player = uniq.SP, Prob = NA)
-for (i in c(1:nrow(Top.SP.probs))) {
-  Top.SP.probs$Prob[i] <- length(Top.SP[which(Top.SP[,1] == i)])/5000
-}
-Top.SP.probs <- Top.SP.probs[order(Top.SP.probs$Prob,decreasing = T),]
-
-write.csv(Top.SP.probs, file = "~/Documents/ASA/MLB Positional Probability/Starting Pitcher.csv")
-
+Top.TE.probs <- Top.TE.probs[order(Top.TE.probs$Prob,decreasing = T),]
+write.csv(Top.TE.probs, file = "NFL/TPPs/TE.csv", row.names = F)
