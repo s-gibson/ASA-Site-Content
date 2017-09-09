@@ -6,7 +6,7 @@
 ##################################
 
 ### Import data, separate into 2016 and 2015 datasets
-load("~/Documents/ASA/ASA Site Content/NFL/data/clean_data.RData")
+load("NFL/data/clean_data.RData")
 
 ### Create list of unique offensive players
 uniq.players <- unique(Fantasy.2016[which(Fantasy.2016$Pos != "Def"),c("First.Last","Team")])
@@ -18,7 +18,7 @@ DraftKings.players <- DraftKings.players[which(is.na(DraftKings.players$Injury))
 
 ### Create large for loop that runs n simulations of drawing a fantasy total from every
 ### player's fantasy distribution function.  Store in a data frame for each position.
-iter <- 1000
+iter <- 10000
 
 ### Quarterback (QB)
 uniq.QB <- unique(DraftKings.players$Name[which(DraftKings.players$Pos == "QB")])

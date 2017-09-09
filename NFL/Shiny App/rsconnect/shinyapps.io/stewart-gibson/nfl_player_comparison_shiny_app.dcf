@@ -1,0 +1,12 @@
+name: nfl_player_comparison_shiny_app
+title: NFL Player Comparison Shiny App
+username:
+account: stewart-gibson
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 211131
+bundleId: 969092
+url: https://stewart-gibson.shinyapps.io/nfl_player_comparison_shiny_app/
+when: 1504663435.83104
+asMultiple: FALSE
+asStatic: FALSE

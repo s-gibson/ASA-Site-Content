@@ -138,6 +138,11 @@ Fantasy.2016$Oppt[which(Fantasy.2016$First.Name == "Ronnie" &
 ## Remove John Phillips - Wk 5
 Fantasy.2016 <- Fantasy.2016[-1958,]
 
+## Remove David Johnson (TE)
+Fantasy.2016 <- Fantasy.2016[-which(Fantasy.2016$First.Name == "David" &
+                                      Fantasy.2016$Last.Name == "Johnson" &
+                                      Fantasy.2016$Pos == "TE"),]
+
 ## REMOVE THIS CODE ONCE MASON PROVIDES REST OF WEEK 14 SCORES
 ## Remove Wk 14 Fantasy information
 Fantasy.2016 <- Fantasy.2016[which(Fantasy.2016$Week != 14),]
@@ -203,4 +208,4 @@ Injuries.2016 <- Injuries.2016[which(Injuries.2016$Avg.FP >= Inj.threshold),]
 
 ## Save data environment for future use
 rm(i, Inj.threshold)
-save.image("data/clean_data.RData")
+save.image("NFL/data/clean_data.RData")

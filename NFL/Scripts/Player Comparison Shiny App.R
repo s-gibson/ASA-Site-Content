@@ -10,12 +10,52 @@ load("~/Documents/ASA/ASA Site Content/NFL/data/clean_data.RData")
 require(shiny)
 require(ggplot2)
 
+### Drop David Johson (TE) from dataset
+Fantasy.2016 <- Fantasy.2016[-which(Fantasy.2016$First.Last == "David Johnson" & Fantasy.2016$Pos == "TE"),]
+
+## Create data frame of teams' total offensive fantasy points, RB fantasy points, and WR/TE
+## fantasy points for each week
+Team.Fantasy.totals.2016 <- unique(Fantasy.2016[c("Week", "Team")])
+Team.Fantasy.totals.2016$Offensive.Fantasy.Points <- NA
+Team.Fantasy.totals.2016$RB.Fantasy.Points <- NA
+Team.Fantasy.totals.2016$WR_TE.Fantasy.Points <- NA
+
+for (i in c(1:nrow(Team.Fantasy.totals.2016))) {
+  Team.Fantasy.totals.2016$Offensive.Fantasy.Points[i] <- sum(Fantasy.2016$DK.points[which(
+    Fantasy.2016$Team == Team.Fantasy.totals.2016$Team[i] &
+      Fantasy.2016$Week == Team.Fantasy.totals.2016$Week[i])], na.rm = T)
+  
+  Team.Fantasy.totals.2016$RB.Fantasy.Points[i] <- sum(Fantasy.2016$DK.points[which(
+    Fantasy.2016$Team == Team.Fantasy.totals.2016$Team[i] &
+      Fantasy.2016$Week == Team.Fantasy.totals.2016$Week[i] &
+      Fantasy.2016$Pos == "RB")], na.rm = T)
+  
+  Team.Fantasy.totals.2016$WR_TE.Fantasy.Points[i] <- sum(Fantasy.2016$DK.points[which(
+    Fantasy.2016$Team == Team.Fantasy.totals.2016$Team[i] &
+      Fantasy.2016$Week == Team.Fantasy.totals.2016$Week[i] &
+      Fantasy.2016$Pos %in% c("WR","TE"))], na.rm = T)
+}
+
+Fantasy.2016.proportions <- merge(Fantasy.2016[which(Fantasy.2016$Pos != 'Def'),c(1,6,7,10,14,15)], 
+                                  Team.Fantasy.totals.2016, by = c("Team", "Week"))
+Fantasy.2016.proportions$Offense.proportion <- Fantasy.2016.proportions$DK.points/
+  Fantasy.2016.proportions$Offensive.Fantasy.Points
+Fantasy.2016.proportions$RB.proportion <- NA
+Fantasy.2016.proportions$RB.proportion[which(Fantasy.2016.proportions$Pos == "RB")] <-
+  Fantasy.2016.proportions$DK.points[which(Fantasy.2016.proportions$Pos == "RB")]/
+  Fantasy.2016.proportions$RB.Fantasy.Points[which(Fantasy.2016.proportions$Pos == "RB")]
+Fantasy.2016.proportions$WR_TE.proportion <- NA
+Fantasy.2016.proportions$WR_TE.proportion[which(Fantasy.2016.proportions$Pos %in% c("WR","TE"))] <-
+  Fantasy.2016.proportions$DK.points[which(Fantasy.2016.proportions$Pos %in% c("WR","TE"))]/
+  Fantasy.2016.proportions$WR_TE.Fantasy.Points[which(Fantasy.2016.proportions$Pos %in% c("WR","TE"))]
+
 ui <- fluidPage(
   # Player dropdown
   selectInput(inputId = "players", label = "Select players to compare:",
               choices = sort(unique(Fantasy.2016$First.Last)), multiple = T),
   selectInput(inputId = "chart.type", label = "Select chart type:",
-              choices = c("DKP Distributions","DKP vs. Point Total","DKP vs. Spread")),
+              choices = c("DKP Distributions","DKP vs. Point Total","DKP vs. Spread",
+                          "DKP Proportions of Total Offense")),
   #actionButton(inputId = "create.chart", label = "Create Chart"),
   
   plotOutput(outputId = "chart")
@@ -51,39 +91,45 @@ server <- function(input, output) {
              xlab("Spread") +
              ylab("Fantasy Points") +
              theme(plot.title = element_text(hjust = 0.5))
-           } else {}
+         } else if (input$chart.type == "DKP Proportions of Total Offense") {
+           ggplot(data = Fantasy.2016.proportions[which(
+             Fantasy.2016.proportions$First.Last %in% input$players),]) +
+             geom_boxplot(aes(x = factor(Initial.Last, 
+                                         levels=levels(factor(Fantasy.2016.proportions$Initial.Last[which(
+                                           Fantasy.2016.proportions$First.Last %in% input$players)]))[
+                                             order(tapply(Fantasy.2016.proportions$Offense.proportion[which(
+                                               Fantasy.2016.proportions$First.Last %in% input$players)], 
+                                               factor(Fantasy.2016.proportions$Initial.Last[which(
+                                                 Fantasy.2016.proportions$First.Last %in% input$players)]), 
+                                               median), 
+                                               decreasing = T)]), y = Offense.proportion), 
+                          outlier.alpha = 0, coef = 0) +
+             theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+             xlab("") +
+             ylab("% of Team Fantasy Points") +
+             ggtitle("Proportion of Team Offensive Fantasy Points") +
+             theme(plot.title = element_text(hjust = 0.5))
+         } else {}
       })
   }
 
 shinyApp(ui = ui, server = server)
 
 #####################
-
-
-
-
-
-
-
-
-
-
-
-ggplot(data = samp.df[which(samp.df$Player %in% c("Andrew Luck","Tom Brady",
-                                                  "Cam Newton","Tyrod Taylor")),],
-       aes(x = DKP)) +
-  geom_density(aes(color = Player,fill = Player),alpha = 0.5) +
-  scale_x_continuous(limits = c(-5,50))
-
-ggplot(data = samp.df[which(samp.df$Player %in% c("Andrew Luck","Tom Brady",
-                                                  "Cam Newton","Tyrod Taylor")),],
-       aes(x = Actual.Points, y = DKP)) +
-  geom_point(aes(color = Player)) +
-  geom_smooth(aes(color = Player), se = F, method = 'loess')
-
-ggplot(data = samp.df[which(samp.df$Player %in% c("Andrew Luck","Tom Brady",
-                                                  "Cam Newton","Tyrod Taylor")),],
-       aes(x = Spread, y = DKP)) +
-  geom_point(aes(color = Player)) +
-  geom_smooth(aes(color = Player), se = F, method = 'loess')
-
+ggplot(data = Fantasy.2016.proportions[which(
+  Fantasy.2016.proportions$First.Last %in% c("Aaron Rodgers","Andrew Luck")),]) +
+  geom_boxplot(aes(x = factor(Initial.Last, 
+                              levels=levels(factor(Fantasy.2016.proportions$Initial.Last[which(
+                                Fantasy.2016.proportions$First.Last %in% c("Aaron Rodgers","Andrew Luck"))]))[
+                                  order(tapply(Fantasy.2016.proportions$Offense.proportion[which(
+                                    Fantasy.2016.proportions$First.Last %in% c("Aaron Rodgers","Andrew Luck"))], 
+                                    factor(Fantasy.2016.proportions$Initial.Last[which(
+                                      Fantasy.2016.proportions$First.Last %in% c("Aaron Rodgers","Andrew Luck"))]), 
+                                    median), 
+                                    decreasing = T)]), y = Offense.proportion), 
+               outlier.alpha = 0, coef = 0) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  xlab("") +
+  ylab("% of Team Fantasy Points") +
+  ggtitle("Proportion of Team Offensive Fantasy Points") +
+  theme(plot.title = element_text(hjust = 0.5))
