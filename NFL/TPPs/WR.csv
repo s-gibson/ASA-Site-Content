@@ -1,294 +1,1 @@
-"Player","Matchup","Salary","Prob"
-"A.J. Green","BAL@CIN 01:00PM ET",8000,0.1498
-"Julio Jones","ATL@CHI 01:00PM ET",8500,0.113
-"Antonio Brown","PIT@CLE 01:00PM ET",8800,0.0891
-"Jordy Nelson","SEA@GB 04:25PM ET",7600,0.0749
-"Doug Baldwin","SEA@GB 04:25PM ET",6700,0.0678
-"T.Y. Hilton","IND@LAR 04:05PM ET",6900,0.0596
-"Davante Adams","SEA@GB 04:25PM ET",5200,0.0592
-"Marquess Wilson","NYJ@BUF 01:00PM ET",3000,0.0553
-"Amari Cooper","OAK@TEN 01:00PM ET",7200,0.0422
-"Michael Thomas","IND@LAR 04:05PM ET",3000,0.0415
-"Eric Decker","OAK@TEN 01:00PM ET",5000,0.0333
-"Golden Tate","ARI@DET 01:00PM ET",6500,0.0305
-"Kenny Britt","PIT@CLE 01:00PM ET",4800,0.0246
-"Sammie Coates","PIT@CLE 01:00PM ET",3800,0.0219
-"Michael Crabtree","OAK@TEN 01:00PM ET",6000,0.0195
-"Dez Bryant","NYG@DAL 08:30PM ET",7500,0.0163
-"Allen Robinson","JAX@HOU 01:00PM ET",5200,0.0146
-"Sammy Watkins","IND@LAR 04:05PM ET",6200,0.013
-"Kelvin Benjamin","CAR@SF 04:25PM ET",5900,0.0097
-"Larry Fitzgerald","ARI@DET 01:00PM ET",5900,0.0086
-"Corey Coleman","PIT@CLE 01:00PM ET",4400,0.0078
-"Kendall Wright","ATL@CHI 01:00PM ET",3200,0.0076
-"Brandon LaFell","BAL@CIN 01:00PM ET",3700,0.0061
-"J.J. Nelson","ARI@DET 01:00PM ET",3700,0.0049
-"Brandon Marshall","NYG@DAL 08:30PM ET",5100,0.0047
-"Robert Woods","IND@LAR 04:05PM ET",4000,0.0042
-"John Brown","ARI@DET 01:00PM ET",4800,0.004
-"Rishard Matthews","OAK@TEN 01:00PM ET",4200,0.0033
-"Taylor Gabriel","ATL@CHI 01:00PM ET",4000,0.0022
-"Randall Cobb","SEA@GB 04:25PM ET",5300,0.002
-"Mike Wallace","BAL@CIN 01:00PM ET",4500,0.0016
-"Jeremy Kerley","NYJ@BUF 01:00PM ET",3800,0.0016
-"DeAndre Hopkins","JAX@HOU 01:00PM ET",5900,0.0015
-"Jordan Matthews","NYJ@BUF 01:00PM ET",4400,0.0015
-"Quincy Enunwa","NYJ@BUF 01:00PM ET",3000,0.0012
-"Pierre Garcon","CAR@SF 04:25PM ET",5300,4e-04
-"Mohamed Sanu","ATL@CHI 01:00PM ET",4200,4e-04
-"Cole Beasley","NYG@DAL 08:30PM ET",4700,2e-04
-"Tavon Austin","IND@LAR 04:05PM ET",3800,2e-04
-"Sterling Shepard","NYG@DAL 08:30PM ET",4100,1e-04
-"Eli Rogers","PIT@CLE 01:00PM ET",3900,1e-04
-"Terrelle Pryor Sr.","PHI@WAS 01:00PM ET",6100,0
-"Martavis Bryant","PIT@CLE 01:00PM ET",6000,0
-"Alshon Jeffery","PHI@WAS 01:00PM ET",5800,0
-"Jeremy Maclin","BAL@CIN 01:00PM ET",5000,0
-"Donte Moncrief","IND@LAR 04:05PM ET",5000,0
-"Devin Funchess","CAR@SF 04:25PM ET",4300,0
-"Kevin White","ATL@CHI 01:00PM ET",4200,0
-"Marvin Jones Jr.","ARI@DET 01:00PM ET",4100,0
-"Justin Hunter","PIT@CLE 01:00PM ET",4000,0
-"Corey Davis","OAK@TEN 01:00PM ET",4000,0
-"Braxton Miller","JAX@HOU 01:00PM ET",3900,0
-"Robby Anderson","NYJ@BUF 01:00PM ET",3800,0
-"Marqise Lee","JAX@HOU 01:00PM ET",3800,0
-"Nelson Agholor","PHI@WAS 01:00PM ET",3800,0
-"Terrance Williams","NYG@DAL 08:30PM ET",3800,0
-"ArDarius Stewart","NYJ@BUF 01:00PM ET",3700,0
-"Torrey Smith","PHI@WAS 01:00PM ET",3700,0
-"Cooper Kupp","IND@LAR 04:05PM ET",3700,0
-"Paul Richardson","SEA@GB 04:25PM ET",3700,0
-"Tyler Boyd","BAL@CIN 01:00PM ET",3600,0
-"JuJu Smith-Schuster","PIT@CLE 01:00PM ET",3600,0
-"Taywan Taylor","OAK@TEN 01:00PM ET",3600,0
-"Jeff Janis","SEA@GB 04:25PM ET",3600,0
-"Zay Jones","NYJ@BUF 01:00PM ET",3500,0
-"Anquan Boldin","NYJ@BUF 01:00PM ET",3500,0
-"Charone Peake","NYJ@BUF 01:00PM ET",3500,0
-"Breshad Perriman","BAL@CIN 01:00PM ET",3500,0
-"Allen Hurns","JAX@HOU 01:00PM ET",3500,0
-"Josh Doctson","PHI@WAS 01:00PM ET",3500,0
-"Kamar Aiken","IND@LAR 04:05PM ET",3500,0
-"Jermaine Kearse","NYJ@BUF 01:00PM ET",3400,0
-"Ryan Grant","PHI@WAS 01:00PM ET",3400,0
-"Victor Cruz","ATL@CHI 01:00PM ET",3300,0
-"Jaron Brown","ARI@DET 01:00PM ET",3300,0
-"Seth Roberts","OAK@TEN 01:00PM ET",3300,0
-"Phillip Dorsett","IND@LAR 04:05PM ET",3300,0
-"Aldrick Robinson","CAR@SF 04:25PM ET",3300,0
-"Russell Shepard","CAR@SF 04:25PM ET",3300,0
-"Roger Lewis","NYG@DAL 08:30PM ET",3300,0
-"Marquise Goodwin","CAR@SF 04:25PM ET",3200,0
-"Tavarres King","NYG@DAL 08:30PM ET",3200,0
-"Brian Quick","PHI@WAS 01:00PM ET",3100,0
-"Pharoh Cooper","IND@LAR 04:05PM ET",3100,0
-"Daikiel Shorts","NYJ@BUF 01:00PM ET",3000,0
-"Andre Holmes","NYJ@BUF 01:00PM ET",3000,0
-"Philly Brown","NYJ@BUF 01:00PM ET",3000,0
-"Brandon Reilly","NYJ@BUF 01:00PM ET",3000,0
-"Rashad Ross","NYJ@BUF 01:00PM ET",3000,0
-"Dezmin Lewis","NYJ@BUF 01:00PM ET",3000,0
-"Brandon Tate","NYJ@BUF 01:00PM ET",3000,0
-"Damore'ea Stringfellow","NYJ@BUF 01:00PM ET",3000,0
-"Deshon Foxx","NYJ@BUF 01:00PM ET",3000,0
-"Chris Harper","NYJ@BUF 01:00PM ET",3000,0
-"Gabe Marks","NYJ@BUF 01:00PM ET",3000,0
-"Myles White","NYJ@BUF 01:00PM ET",3000,0
-"Frankie Hammond Jr.","NYJ@BUF 01:00PM ET",3000,0
-"Chad Hansen","NYJ@BUF 01:00PM ET",3000,0
-"Jalin Marshall","NYJ@BUF 01:00PM ET",3000,0
-"Lucky Whitehead","NYJ@BUF 01:00PM ET",3000,0
-"Kaelin Clay","NYJ@BUF 01:00PM ET",3000,0
-"Marvin Hall","ATL@CHI 01:00PM ET",3000,0
-"Nick Williams","ATL@CHI 01:00PM ET",3000,0
-"Justin Hardy","ATL@CHI 01:00PM ET",3000,0
-"B.J. Daniels","ATL@CHI 01:00PM ET",3000,0
-"Andre Roberts","ATL@CHI 01:00PM ET",3000,0
-"Bra'Lon Cherry","ATL@CHI 01:00PM ET",3000,0
-"Josh Magee","ATL@CHI 01:00PM ET",3000,0
-"Deante Burton","ATL@CHI 01:00PM ET",3000,0
-"Reginald Davis III","ATL@CHI 01:00PM ET",3000,0
-"Anthony Dable","ATL@CHI 01:00PM ET",3000,0
-"Tanner Gentry","ATL@CHI 01:00PM ET",3000,0
-"Josh Bellamy","ATL@CHI 01:00PM ET",3000,0
-"Titus Davis","ATL@CHI 01:00PM ET",3000,0
-"Deonte Thompson","ATL@CHI 01:00PM ET",3000,0
-"Rueben Randle","ATL@CHI 01:00PM ET",3000,0
-"Alton Howard","ATL@CHI 01:00PM ET",3000,0
-"Daniel Braverman","ATL@CHI 01:00PM ET",3000,0
-"Tre McBride","ATL@CHI 01:00PM ET",3000,0
-"Jake Kumerow","BAL@CIN 01:00PM ET",3000,0
-"Josh Malone","BAL@CIN 01:00PM ET",3000,0
-"Kermit Whitfield","BAL@CIN 01:00PM ET",3000,0
-"Alonzo Russell","BAL@CIN 01:00PM ET",3000,0
-"Chris Brown","BAL@CIN 01:00PM ET",3000,0
-"Cody Core","BAL@CIN 01:00PM ET",3000,0
-"Alex Erickson","BAL@CIN 01:00PM ET",3000,0
-"Chris Moore","BAL@CIN 01:00PM ET",3000,0
-"Vince Mayle","BAL@CIN 01:00PM ET",3000,0
-"Quincy Adeboyejo","BAL@CIN 01:00PM ET",3000,0
-"Tim White","BAL@CIN 01:00PM ET",3000,0
-"Chris Matthews","BAL@CIN 01:00PM ET",3000,0
-"Kenny Bell","BAL@CIN 01:00PM ET",3000,0
-"Michael Campanaro","BAL@CIN 01:00PM ET",3000,0
-"Griff Whalen","BAL@CIN 01:00PM ET",3000,0
-"Keenan Reynolds","BAL@CIN 01:00PM ET",3000,0
-"C.J. Board","BAL@CIN 01:00PM ET",3000,0
-"Reggie Davis","PIT@CLE 01:00PM ET",3000,0
-"Rannell Hall","PIT@CLE 01:00PM ET",3000,0
-"Jordan Payton","PIT@CLE 01:00PM ET",3000,0
-"Richard Mullaney","PIT@CLE 01:00PM ET",3000,0
-"Rashard Higgins","PIT@CLE 01:00PM ET",3000,0
-"Mario Alford","PIT@CLE 01:00PM ET",3000,0
-"Ricardo Louis","PIT@CLE 01:00PM ET",3000,0
-"Rasheed Bailey","PIT@CLE 01:00PM ET",3000,0
-"Jordan Leslie","PIT@CLE 01:00PM ET",3000,0
-"Josh Boyce","PIT@CLE 01:00PM ET",3000,0
-"Justin Thomas","PIT@CLE 01:00PM ET",3000,0
-"Darrius Heyward-Bey","PIT@CLE 01:00PM ET",3000,0
-"Marcus Tucker","PIT@CLE 01:00PM ET",3000,0
-"Demarcus Ayers","PIT@CLE 01:00PM ET",3000,0
-"Cobi Hamilton","PIT@CLE 01:00PM ET",3000,0
-"Kasen Williams","PIT@CLE 01:00PM ET",3000,0
-"Keshawn Martin","ARI@DET 01:00PM ET",3000,0
-"Ryan Spadola","ARI@DET 01:00PM ET",3000,0
-"TJ Jones","ARI@DET 01:00PM ET",3000,0
-"Jared Abbrederis","ARI@DET 01:00PM ET",3000,0
-"Jace Billingsley","ARI@DET 01:00PM ET",3000,0
-"Michael Rector","ARI@DET 01:00PM ET",3000,0
-"Dontez Ford","ARI@DET 01:00PM ET",3000,0
-"Noel Thomas","ARI@DET 01:00PM ET",3000,0
-"Chris Hubert","ARI@DET 01:00PM ET",3000,0
-"Carlton Agudosi","ARI@DET 01:00PM ET",3000,0
-"Krishawn Hogan","ARI@DET 01:00PM ET",3000,0
-"Jeremy Ross","ARI@DET 01:00PM ET",3000,0
-"Aaron Dobson","ARI@DET 01:00PM ET",3000,0
-"Brittan Golden","ARI@DET 01:00PM ET",3000,0
-"Chad Williams","ARI@DET 01:00PM ET",3000,0
-"Dres Anderson","JAX@HOU 01:00PM ET",3000,0
-"DeAndrew White","JAX@HOU 01:00PM ET",3000,0
-"Devin Street","JAX@HOU 01:00PM ET",3000,0
-"Justin Hardee","JAX@HOU 01:00PM ET",3000,0
-"Riley McCarron","JAX@HOU 01:00PM ET",3000,0
-"Chris Thompson","PHI@WAS 01:00PM ET",3700,0
-"Wendall Williams","JAX@HOU 01:00PM ET",3000,0
-"Marcus Leak","JAX@HOU 01:00PM ET",3000,0
-"Andy Jones","JAX@HOU 01:00PM ET",3000,0
-"Keelan Cole","JAX@HOU 01:00PM ET",3000,0
-"Dede Westbrook","JAX@HOU 01:00PM ET",3000,0
-"Arrelious Benn","JAX@HOU 01:00PM ET",3000,0
-"Kenneth Walker III","JAX@HOU 01:00PM ET",3000,0
-"Amba Etta-Tawo","JAX@HOU 01:00PM ET",3000,0
-"Larry Pinkard","JAX@HOU 01:00PM ET",3000,0
-"Rashad Greene Sr.","JAX@HOU 01:00PM ET",3000,0
-"Jamal Robinson","JAX@HOU 01:00PM ET",3000,0
-"Shane Wynn","JAX@HOU 01:00PM ET",3000,0
-"Isaiah Ford","Postponed",3000,0
-"Rashawn Scott","Postponed",3000,0
-"Jakeem Grant","Postponed",3000,0
-"Francis Owusu","Postponed",3000,0
-"Drew Morgan","Postponed",3000,0
-"Leonte Carroo","Postponed",3000,0
-"Jordan Westerkamp","Postponed",3000,0
-"Malcolm Lewis","Postponed",3000,0
-"Mitch Mathews","Postponed",3000,0
-"Donteea Dye","Postponed",3000,0
-"Vincent Jackson","Postponed",3000,0
-"Chris Godwin","Postponed",3000,0
-"Bernard Reedy","Postponed",3000,0
-"Freddie Martino","Postponed",3000,0
-"Shaq Hill","Postponed",3000,0
-"Josh Huff","Postponed",3000,0
-"Bobo Wilson","Postponed",3000,0
-"Derel Walker","Postponed",3000,0
-"Harry Douglas","OAK@TEN 01:00PM ET",3000,0
-"Eric Weems","OAK@TEN 01:00PM ET",3000,0
-"Darius Jennings","OAK@TEN 01:00PM ET",3000,0
-"Mekale McKay","OAK@TEN 01:00PM ET",3000,0
-"KeVonn Mabon","OAK@TEN 01:00PM ET",3000,0
-"Jonathan Krause","OAK@TEN 01:00PM ET",3000,0
-"Giovanni Pascascio","OAK@TEN 01:00PM ET",3000,0
-"Cordarrelle Patterson","OAK@TEN 01:00PM ET",3000,0
-"Ishmael Zamora","OAK@TEN 01:00PM ET",3000,0
-"Isaac Whitney","OAK@TEN 01:00PM ET",3000,0
-"Johnny Holton","OAK@TEN 01:00PM ET",3000,0
-"K.J. Brent","OAK@TEN 01:00PM ET",3000,0
-"Keon Hatcher","OAK@TEN 01:00PM ET",3000,0
-"Jaydon Mickens","OAK@TEN 01:00PM ET",3000,0
-"Marcus Johnson","PHI@WAS 01:00PM ET",3000,0
-"David Watford","PHI@WAS 01:00PM ET",3000,0
-"Paul Turner","PHI@WAS 01:00PM ET",3000,0
-"Bryce Treggs","PHI@WAS 01:00PM ET",3000,0
-"Mack Hollins","PHI@WAS 01:00PM ET",3000,0
-"Shelton Gibson","PHI@WAS 01:00PM ET",3000,0
-"Greg Ward Jr.","PHI@WAS 01:00PM ET",3000,0
-"Maurice Harris","PHI@WAS 01:00PM ET",3000,0
-"Kendal Thompson","PHI@WAS 01:00PM ET",3000,0
-"Zach Pascal","PHI@WAS 01:00PM ET",3000,0
-"Levern Jacobs","PHI@WAS 01:00PM ET",3000,0
-"James Quick","PHI@WAS 01:00PM ET",3000,0
-"Robert Davis","PHI@WAS 01:00PM ET",3000,0
-"Chester Rogers","IND@LAR 04:05PM ET",3000,0
-"Harvey Binford","IND@LAR 04:05PM ET",3000,0
-"Quan Bray","IND@LAR 04:05PM ET",3000,0
-"Chris Briggs","IND@LAR 04:05PM ET",3000,0
-"Bug Howard","IND@LAR 04:05PM ET",3000,0
-"JoJo Natson Jr.","IND@LAR 04:05PM ET",3000,0
-"Tevaun Smith","IND@LAR 04:05PM ET",3000,0
-"Fred Brown","IND@LAR 04:05PM ET",3000,0
-"Paul McRoberts","IND@LAR 04:05PM ET",3000,0
-"Brandon Shippen","IND@LAR 04:05PM ET",3000,0
-"Nelson Spruce","IND@LAR 04:05PM ET",3000,0
-"Shakeir Ryan","IND@LAR 04:05PM ET",3000,0
-"Josh Reynolds","IND@LAR 04:05PM ET",3000,0
-"K.D. Cannon","IND@LAR 04:05PM ET",3000,0
-"Matt Hazel","IND@LAR 04:05PM ET",3000,0
-"DeAngelo Yancey","SEA@GB 04:25PM ET",3000,0
-"Michael Clark","SEA@GB 04:25PM ET",3000,0
-"Montay Crockett","SEA@GB 04:25PM ET",3000,0
-"Trevor Davis","SEA@GB 04:25PM ET",3000,0
-"Max McCaffrey","SEA@GB 04:25PM ET",3000,0
-"Colby Pearson","SEA@GB 04:25PM ET",3000,0
-"Geronimo Allison","SEA@GB 04:25PM ET",3000,0
-"Malachi Dupre","SEA@GB 04:25PM ET",3000,0
-"Jamel Johnson","SEA@GB 04:25PM ET",3000,0
-"Tanner McEvoy","SEA@GB 04:25PM ET",3000,0
-"Amara Darboh","SEA@GB 04:25PM ET",3000,0
-"Cyril Grayson","SEA@GB 04:25PM ET",3000,0
-"David Moore","SEA@GB 04:25PM ET",3000,0
-"Kenny Lawler Jr.","SEA@GB 04:25PM ET",3000,0
-"Darreus Rogers","SEA@GB 04:25PM ET",3000,0
-"DeAndre Carter","CAR@SF 04:25PM ET",3000,0
-"Trent Taylor","CAR@SF 04:25PM ET",3000,0
-"Louis Murphy","CAR@SF 04:25PM ET",3000,0
-"Tim Patrick","CAR@SF 04:25PM ET",3000,0
-"Victor Bolden Jr.","CAR@SF 04:25PM ET",3000,0
-"Aaron Burbridge","CAR@SF 04:25PM ET",3000,0
-"Kendrick Bourne","CAR@SF 04:25PM ET",3000,0
-"DeAndre Smelter","CAR@SF 04:25PM ET",3000,0
-"Fred Ross Jr.","CAR@SF 04:25PM ET",3000,0
-"Keyarris Garrett","CAR@SF 04:25PM ET",3000,0
-"Mose Frazier","CAR@SF 04:25PM ET",3000,0
-"Austin Duke","CAR@SF 04:25PM ET",3000,0
-"Damiere Byrd","CAR@SF 04:25PM ET",3000,0
-"Trevor Graham","CAR@SF 04:25PM ET",3000,0
-"Brenton Bersin","CAR@SF 04:25PM ET",3000,0
-"Karel Hamilton","NYG@DAL 08:30PM ET",3000,0
-"Brice Butler","NYG@DAL 08:30PM ET",3000,0
-"Ryan Switzer","NYG@DAL 08:30PM ET",3000,0
-"Noah Brown","NYG@DAL 08:30PM ET",3000,0
-"Brian Brown","NYG@DAL 08:30PM ET",3000,0
-"Uzoma Nwachukwu","NYG@DAL 08:30PM ET",3000,0
-"Javontee Herndon","NYG@DAL 08:30PM ET",3000,0
-"Lance Lenoir","NYG@DAL 08:30PM ET",3000,0
-"C.J. Germany","NYG@DAL 08:30PM ET",3000,0
-"Jerome Lane","NYG@DAL 08:30PM ET",3000,0
-"Travis Rudolph","NYG@DAL 08:30PM ET",3000,0
-"Kevin Snead","NYG@DAL 08:30PM ET",3000,0
-"Keeon Johnson","NYG@DAL 08:30PM ET",3000,0
-"Darius Powe","NYG@DAL 08:30PM ET",3000,0
-"Kevin Norwood","NYG@DAL 08:30PM ET",3000,0
-"Dwayne Harris","NYG@DAL 08:30PM ET",3000,0
-"Marquis Bundy","NYG@DAL 08:30PM ET",3000,0
-"Canaan Severin","NYG@DAL 08:30PM ET",3000,0
+Rank,Player,Matchup,Salary,Prob,Rank,Player,Matchup,Salary,Prob1,A.J. Green,BAL@CIN 01:00PM ET,8000,0.1498,21,Corey Coleman,PIT@CLE 01:00PM ET,4400,0.00782,Julio Jones,ATL@CHI 01:00PM ET,8500,0.113,21,Kendall Wright,ATL@CHI 01:00PM ET,3200,0.00763,Antonio Brown,PIT@CLE 01:00PM ET,8800,0.0891,21,Brandon LaFell,BAL@CIN 01:00PM ET,3700,0.00614,Jordy Nelson,SEA@GB 04:25PM ET,7600,0.0749,21,J.J. Nelson,ARI@DET 01:00PM ET,3700,0.00495,Doug Baldwin,SEA@GB 04:25PM ET,6700,0.0678,21,Brandon Marshall,NYG@DAL 08:30PM ET,5100,0.00476,T.Y. Hilton,IND@LAR 04:05PM ET,6900,0.0596,21,Robert Woods,IND@LAR 04:05PM ET,4000,0.00427,Davante Adams,SEA@GB 04:25PM ET,5200,0.0592,21,John Brown,ARI@DET 01:00PM ET,4800,0.0048,Marquess Wilson,NYJ@BUF 01:00PM ET,3000,0.0553,21,Rishard Matthews,OAK@TEN 01:00PM ET,4200,0.00339,Amari Cooper,OAK@TEN 01:00PM ET,7200,0.0422,21,Taylor Gabriel,ATL@CHI 01:00PM ET,4000,0.002210,Michael Thomas,IND@LAR 04:05PM ET,3000,0.0415,21,Randall Cobb,SEA@GB 04:25PM ET,5300,0.00211,Eric Decker,OAK@TEN 01:00PM ET,5000,0.0333,21,Mike Wallace,BAL@CIN 01:00PM ET,4500,0.001612,Golden Tate,ARI@DET 01:00PM ET,6500,0.0305,21,Jeremy Kerley,NYJ@BUF 01:00PM ET,3800,0.001613,Kenny Britt,PIT@CLE 01:00PM ET,4800,0.0246,21,DeAndre Hopkins,JAX@HOU 01:00PM ET,5900,0.001514,Sammie Coates,PIT@CLE 01:00PM ET,3800,0.0219,21,Jordan Matthews,NYJ@BUF 01:00PM ET,4400,0.001515,Michael Crabtree,OAK@TEN 01:00PM ET,6000,0.0195,21,Quincy Enunwa,NYJ@BUF 01:00PM ET,3000,0.001216,Dez Bryant,NYG@DAL 08:30PM ET,7500,0.0163,21,Pierre Garcon,CAR@SF 04:25PM ET,5300,4.00E-0417,Allen Robinson,JAX@HOU 01:00PM ET,5200,0.0146,21,Mohamed Sanu,ATL@CHI 01:00PM ET,4200,4.00E-0418,Sammy Watkins,IND@LAR 04:05PM ET,6200,0.013,21,Cole Beasley,NYG@DAL 08:30PM ET,4700,2.00E-0419,Kelvin Benjamin,CAR@SF 04:25PM ET,5900,0.0097,21,Tavon Austin,IND@LAR 04:05PM ET,3800,2.00E-0420,Larry Fitzgerald,ARI@DET 01:00PM ET,5900,0.0086,21,Sterling Shepard,NYG@DAL 08:30PM ET,4100,1.00E-04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Eli Rogers,PIT@CLE 01:00PM ET,3900,1.00E-04,,,,,,Terrelle Pryor Sr.,PHI@WAS 01:00PM ET,6100,0,,,,,,Martavis Bryant,PIT@CLE 01:00PM ET,6000,0,,,,,,Alshon Jeffery,PHI@WAS 01:00PM ET,5800,0,,,,,,Jeremy Maclin,BAL@CIN 01:00PM ET,5000,0,,,,,,Donte Moncrief,IND@LAR 04:05PM ET,5000,0,,,,,,Devin Funchess,CAR@SF 04:25PM ET,4300,0,,,,,,Kevin White,ATL@CHI 01:00PM ET,4200,0,,,,,,Marvin Jones Jr.,ARI@DET 01:00PM ET,4100,0,,,,,,Justin Hunter,PIT@CLE 01:00PM ET,4000,0,,,,,,Corey Davis,OAK@TEN 01:00PM ET,4000,0,,,,,,Braxton Miller,JAX@HOU 01:00PM ET,3900,0,,,,,,Robby Anderson,NYJ@BUF 01:00PM ET,3800,0,,,,,,Marqise Lee,JAX@HOU 01:00PM ET,3800,0,,,,,,Nelson Agholor,PHI@WAS 01:00PM ET,3800,0,,,,,,Terrance Williams,NYG@DAL 08:30PM ET,3800,0,,,,,,ArDarius Stewart,NYJ@BUF 01:00PM ET,3700,0,,,,,,Torrey Smith,PHI@WAS 01:00PM ET,3700,0,,,,,,Cooper Kupp,IND@LAR 04:05PM ET,3700,0,,,,,,Paul Richardson,SEA@GB 04:25PM ET,3700,0,,,,,,Tyler Boyd,BAL@CIN 01:00PM ET,3600,0,,,,,,JuJu Smith-Schuster,PIT@CLE 01:00PM ET,3600,0,,,,,,Taywan Taylor,OAK@TEN 01:00PM ET,3600,0,,,,,,Jeff Janis,SEA@GB 04:25PM ET,3600,0,,,,,,Zay Jones,NYJ@BUF 01:00PM ET,3500,0,,,,,,Anquan Boldin,NYJ@BUF 01:00PM ET,3500,0,,,,,,Charone Peake,NYJ@BUF 01:00PM ET,3500,0,,,,,,Breshad Perriman,BAL@CIN 01:00PM ET,3500,0,,,,,,Allen Hurns,JAX@HOU 01:00PM ET,3500,0,,,,,,Josh Doctson,PHI@WAS 01:00PM ET,3500,0,,,,,,Kamar Aiken,IND@LAR 04:05PM ET,3500,0,,,,,,Jermaine Kearse,NYJ@BUF 01:00PM ET,3400,0,,,,,,Ryan Grant,PHI@WAS 01:00PM ET,3400,0,,,,,,Victor Cruz,ATL@CHI 01:00PM ET,3300,0,,,,,,Jaron Brown,ARI@DET 01:00PM ET,3300,0,,,,,,Seth Roberts,OAK@TEN 01:00PM ET,3300,0,,,,,,Phillip Dorsett,IND@LAR 04:05PM ET,3300,0,,,,,,Aldrick Robinson,CAR@SF 04:25PM ET,3300,0,,,,,,Russell Shepard,CAR@SF 04:25PM ET,3300,0,,,,,,Roger Lewis,NYG@DAL 08:30PM ET,3300,0,,,,,,Marquise Goodwin,CAR@SF 04:25PM ET,3200,0,,,,,,Tavarres King,NYG@DAL 08:30PM ET,3200,0,,,,,,Brian Quick,PHI@WAS 01:00PM ET,3100,0,,,,,,Pharoh Cooper,IND@LAR 04:05PM ET,3100,0,,,,,,Daikiel Shorts,NYJ@BUF 01:00PM ET,3000,0,,,,,,Andre Holmes,NYJ@BUF 01:00PM ET,3000,0,,,,,,Philly Brown,NYJ@BUF 01:00PM ET,3000,0,,,,,,Brandon Reilly,NYJ@BUF 01:00PM ET,3000,0,,,,,,Rashad Ross,NYJ@BUF 01:00PM ET,3000,0,,,,,,Dezmin Lewis,NYJ@BUF 01:00PM ET,3000,0,,,,,,Brandon Tate,NYJ@BUF 01:00PM ET,3000,0,,,,,,Damore'ea Stringfellow,NYJ@BUF 01:00PM ET,3000,0,,,,,,Deshon Foxx,NYJ@BUF 01:00PM ET,3000,0,,,,,,Chris Harper,NYJ@BUF 01:00PM ET,3000,0,,,,,,Gabe Marks,NYJ@BUF 01:00PM ET,3000,0,,,,,,Myles White,NYJ@BUF 01:00PM ET,3000,0,,,,,,Frankie Hammond Jr.,NYJ@BUF 01:00PM ET,3000,0,,,,,,Chad Hansen,NYJ@BUF 01:00PM ET,3000,0,,,,,,Jalin Marshall,NYJ@BUF 01:00PM ET,3000,0,,,,,,Lucky Whitehead,NYJ@BUF 01:00PM ET,3000,0,,,,,,Kaelin Clay,NYJ@BUF 01:00PM ET,3000,0,,,,,,Marvin Hall,ATL@CHI 01:00PM ET,3000,0,,,,,,Nick Williams,ATL@CHI 01:00PM ET,3000,0,,,,,,Justin Hardy,ATL@CHI 01:00PM ET,3000,0,,,,,,B.J. Daniels,ATL@CHI 01:00PM ET,3000,0,,,,,,Andre Roberts,ATL@CHI 01:00PM ET,3000,0,,,,,,Bra'Lon Cherry,ATL@CHI 01:00PM ET,3000,0,,,,,,Josh Magee,ATL@CHI 01:00PM ET,3000,0,,,,,,Deante Burton,ATL@CHI 01:00PM ET,3000,0,,,,,,Reginald Davis III,ATL@CHI 01:00PM ET,3000,0,,,,,,Anthony Dable,ATL@CHI 01:00PM ET,3000,0,,,,,,Tanner Gentry,ATL@CHI 01:00PM ET,3000,0,,,,,,Josh Bellamy,ATL@CHI 01:00PM ET,3000,0,,,,,,Titus Davis,ATL@CHI 01:00PM ET,3000,0,,,,,,Deonte Thompson,ATL@CHI 01:00PM ET,3000,0,,,,,,Rueben Randle,ATL@CHI 01:00PM ET,3000,0,,,,,,Alton Howard,ATL@CHI 01:00PM ET,3000,0,,,,,,Daniel Braverman,ATL@CHI 01:00PM ET,3000,0,,,,,,Tre McBride,ATL@CHI 01:00PM ET,3000,0,,,,,,Jake Kumerow,BAL@CIN 01:00PM ET,3000,0,,,,,,Josh Malone,BAL@CIN 01:00PM ET,3000,0,,,,,,Kermit Whitfield,BAL@CIN 01:00PM ET,3000,0,,,,,,Alonzo Russell,BAL@CIN 01:00PM ET,3000,0,,,,,,Chris Brown,BAL@CIN 01:00PM ET,3000,0,,,,,,Cody Core,BAL@CIN 01:00PM ET,3000,0,,,,,,Alex Erickson,BAL@CIN 01:00PM ET,3000,0,,,,,,Chris Moore,BAL@CIN 01:00PM ET,3000,0,,,,,,Vince Mayle,BAL@CIN 01:00PM ET,3000,0,,,,,,Quincy Adeboyejo,BAL@CIN 01:00PM ET,3000,0,,,,,,Tim White,BAL@CIN 01:00PM ET,3000,0,,,,,,Chris Matthews,BAL@CIN 01:00PM ET,3000,0,,,,,,Kenny Bell,BAL@CIN 01:00PM ET,3000,0,,,,,,Michael Campanaro,BAL@CIN 01:00PM ET,3000,0,,,,,,Griff Whalen,BAL@CIN 01:00PM ET,3000,0,,,,,,Keenan Reynolds,BAL@CIN 01:00PM ET,3000,0,,,,,,C.J. Board,BAL@CIN 01:00PM ET,3000,0,,,,,,Reggie Davis,PIT@CLE 01:00PM ET,3000,0,,,,,,Rannell Hall,PIT@CLE 01:00PM ET,3000,0,,,,,,Jordan Payton,PIT@CLE 01:00PM ET,3000,0,,,,,,Richard Mullaney,PIT@CLE 01:00PM ET,3000,0,,,,,,Rashard Higgins,PIT@CLE 01:00PM ET,3000,0,,,,,,Mario Alford,PIT@CLE 01:00PM ET,3000,0,,,,,,Ricardo Louis,PIT@CLE 01:00PM ET,3000,0,,,,,,Rasheed Bailey,PIT@CLE 01:00PM ET,3000,0,,,,,,Jordan Leslie,PIT@CLE 01:00PM ET,3000,0,,,,,,Josh Boyce,PIT@CLE 01:00PM ET,3000,0,,,,,,Justin Thomas,PIT@CLE 01:00PM ET,3000,0,,,,,,Darrius Heyward-Bey,PIT@CLE 01:00PM ET,3000,0,,,,,,Marcus Tucker,PIT@CLE 01:00PM ET,3000,0,,,,,,Demarcus Ayers,PIT@CLE 01:00PM ET,3000,0,,,,,,Cobi Hamilton,PIT@CLE 01:00PM ET,3000,0,,,,,,Kasen Williams,PIT@CLE 01:00PM ET,3000,0,,,,,,Keshawn Martin,ARI@DET 01:00PM ET,3000,0,,,,,,Ryan Spadola,ARI@DET 01:00PM ET,3000,0,,,,,,TJ Jones,ARI@DET 01:00PM ET,3000,0,,,,,,Jared Abbrederis,ARI@DET 01:00PM ET,3000,0,,,,,,Jace Billingsley,ARI@DET 01:00PM ET,3000,0,,,,,,Michael Rector,ARI@DET 01:00PM ET,3000,0,,,,,,Dontez Ford,ARI@DET 01:00PM ET,3000,0,,,,,,Noel Thomas,ARI@DET 01:00PM ET,3000,0,,,,,,Chris Hubert,ARI@DET 01:00PM ET,3000,0,,,,,,Carlton Agudosi,ARI@DET 01:00PM ET,3000,0,,,,,,Krishawn Hogan,ARI@DET 01:00PM ET,3000,0,,,,,,Jeremy Ross,ARI@DET 01:00PM ET,3000,0,,,,,,Aaron Dobson,ARI@DET 01:00PM ET,3000,0,,,,,,Brittan Golden,ARI@DET 01:00PM ET,3000,0,,,,,,Chad Williams,ARI@DET 01:00PM ET,3000,0,,,,,,Dres Anderson,JAX@HOU 01:00PM ET,3000,0,,,,,,DeAndrew White,JAX@HOU 01:00PM ET,3000,0,,,,,,Devin Street,JAX@HOU 01:00PM ET,3000,0,,,,,,Justin Hardee,JAX@HOU 01:00PM ET,3000,0,,,,,,Riley McCarron,JAX@HOU 01:00PM ET,3000,0,,,,,,Chris Thompson,PHI@WAS 01:00PM ET,3700,0,,,,,,Wendall Williams,JAX@HOU 01:00PM ET,3000,0,,,,,,Marcus Leak,JAX@HOU 01:00PM ET,3000,0,,,,,,Andy Jones,JAX@HOU 01:00PM ET,3000,0,,,,,,Keelan Cole,JAX@HOU 01:00PM ET,3000,0,,,,,,Dede Westbrook,JAX@HOU 01:00PM ET,3000,0,,,,,,Arrelious Benn,JAX@HOU 01:00PM ET,3000,0,,,,,,Kenneth Walker III,JAX@HOU 01:00PM ET,3000,0,,,,,,Amba Etta-Tawo,JAX@HOU 01:00PM ET,3000,0,,,,,,Larry Pinkard,JAX@HOU 01:00PM ET,3000,0,,,,,,Rashad Greene Sr.,JAX@HOU 01:00PM ET,3000,0,,,,,,Jamal Robinson,JAX@HOU 01:00PM ET,3000,0,,,,,,Shane Wynn,JAX@HOU 01:00PM ET,3000,0,,,,,,Isaiah Ford,Postponed,3000,0,,,,,,Rashawn Scott,Postponed,3000,0,,,,,,Jakeem Grant,Postponed,3000,0,,,,,,Francis Owusu,Postponed,3000,0,,,,,,Drew Morgan,Postponed,3000,0,,,,,,Leonte Carroo,Postponed,3000,0,,,,,,Jordan Westerkamp,Postponed,3000,0,,,,,,Malcolm Lewis,Postponed,3000,0,,,,,,Mitch Mathews,Postponed,3000,0,,,,,,Donteea Dye,Postponed,3000,0,,,,,,Vincent Jackson,Postponed,3000,0,,,,,,Chris Godwin,Postponed,3000,0,,,,,,Bernard Reedy,Postponed,3000,0,,,,,,Freddie Martino,Postponed,3000,0,,,,,,Shaq Hill,Postponed,3000,0,,,,,,Josh Huff,Postponed,3000,0,,,,,,Bobo Wilson,Postponed,3000,0,,,,,,Derel Walker,Postponed,3000,0,,,,,,Harry Douglas,OAK@TEN 01:00PM ET,3000,0,,,,,,Eric Weems,OAK@TEN 01:00PM ET,3000,0,,,,,,Darius Jennings,OAK@TEN 01:00PM ET,3000,0,,,,,,Mekale McKay,OAK@TEN 01:00PM ET,3000,0,,,,,,KeVonn Mabon,OAK@TEN 01:00PM ET,3000,0,,,,,,Jonathan Krause,OAK@TEN 01:00PM ET,3000,0,,,,,,Giovanni Pascascio,OAK@TEN 01:00PM ET,3000,0,,,,,,Cordarrelle Patterson,OAK@TEN 01:00PM ET,3000,0,,,,,,Ishmael Zamora,OAK@TEN 01:00PM ET,3000,0,,,,,,Isaac Whitney,OAK@TEN 01:00PM ET,3000,0,,,,,,Johnny Holton,OAK@TEN 01:00PM ET,3000,0,,,,,,K.J. Brent,OAK@TEN 01:00PM ET,3000,0,,,,,,Keon Hatcher,OAK@TEN 01:00PM ET,3000,0,,,,,,Jaydon Mickens,OAK@TEN 01:00PM ET,3000,0,,,,,,Marcus Johnson,PHI@WAS 01:00PM ET,3000,0,,,,,,David Watford,PHI@WAS 01:00PM ET,3000,0,,,,,,Paul Turner,PHI@WAS 01:00PM ET,3000,0,,,,,,Bryce Treggs,PHI@WAS 01:00PM ET,3000,0,,,,,,Mack Hollins,PHI@WAS 01:00PM ET,3000,0,,,,,,Shelton Gibson,PHI@WAS 01:00PM ET,3000,0,,,,,,Greg Ward Jr.,PHI@WAS 01:00PM ET,3000,0,,,,,,Maurice Harris,PHI@WAS 01:00PM ET,3000,0,,,,,,Kendal Thompson,PHI@WAS 01:00PM ET,3000,0,,,,,,Zach Pascal,PHI@WAS 01:00PM ET,3000,0,,,,,,Levern Jacobs,PHI@WAS 01:00PM ET,3000,0,,,,,,James Quick,PHI@WAS 01:00PM ET,3000,0,,,,,,Robert Davis,PHI@WAS 01:00PM ET,3000,0,,,,,,Chester Rogers,IND@LAR 04:05PM ET,3000,0,,,,,,Harvey Binford,IND@LAR 04:05PM ET,3000,0,,,,,,Quan Bray,IND@LAR 04:05PM ET,3000,0,,,,,,Chris Briggs,IND@LAR 04:05PM ET,3000,0,,,,,,Bug Howard,IND@LAR 04:05PM ET,3000,0,,,,,,JoJo Natson Jr.,IND@LAR 04:05PM ET,3000,0,,,,,,Tevaun Smith,IND@LAR 04:05PM ET,3000,0,,,,,,Fred Brown,IND@LAR 04:05PM ET,3000,0,,,,,,Paul McRoberts,IND@LAR 04:05PM ET,3000,0,,,,,,Brandon Shippen,IND@LAR 04:05PM ET,3000,0,,,,,,Nelson Spruce,IND@LAR 04:05PM ET,3000,0,,,,,,Shakeir Ryan,IND@LAR 04:05PM ET,3000,0,,,,,,Josh Reynolds,IND@LAR 04:05PM ET,3000,0,,,,,,K.D. Cannon,IND@LAR 04:05PM ET,3000,0,,,,,,Matt Hazel,IND@LAR 04:05PM ET,3000,0,,,,,,DeAngelo Yancey,SEA@GB 04:25PM ET,3000,0,,,,,,Michael Clark,SEA@GB 04:25PM ET,3000,0,,,,,,Montay Crockett,SEA@GB 04:25PM ET,3000,0,,,,,,Trevor Davis,SEA@GB 04:25PM ET,3000,0,,,,,,Max McCaffrey,SEA@GB 04:25PM ET,3000,0,,,,,,Colby Pearson,SEA@GB 04:25PM ET,3000,0,,,,,,Geronimo Allison,SEA@GB 04:25PM ET,3000,0,,,,,,Malachi Dupre,SEA@GB 04:25PM ET,3000,0,,,,,,Jamel Johnson,SEA@GB 04:25PM ET,3000,0,,,,,,Tanner McEvoy,SEA@GB 04:25PM ET,3000,0,,,,,,Amara Darboh,SEA@GB 04:25PM ET,3000,0,,,,,,Cyril Grayson,SEA@GB 04:25PM ET,3000,0,,,,,,David Moore,SEA@GB 04:25PM ET,3000,0,,,,,,Kenny Lawler Jr.,SEA@GB 04:25PM ET,3000,0,,,,,,Darreus Rogers,SEA@GB 04:25PM ET,3000,0,,,,,,DeAndre Carter,CAR@SF 04:25PM ET,3000,0,,,,,,Trent Taylor,CAR@SF 04:25PM ET,3000,0,,,,,,Louis Murphy,CAR@SF 04:25PM ET,3000,0,,,,,,Tim Patrick,CAR@SF 04:25PM ET,3000,0,,,,,,Victor Bolden Jr.,CAR@SF 04:25PM ET,3000,0,,,,,,Aaron Burbridge,CAR@SF 04:25PM ET,3000,0,,,,,,Kendrick Bourne,CAR@SF 04:25PM ET,3000,0,,,,,,DeAndre Smelter,CAR@SF 04:25PM ET,3000,0,,,,,,Fred Ross Jr.,CAR@SF 04:25PM ET,3000,0,,,,,,Keyarris Garrett,CAR@SF 04:25PM ET,3000,0,,,,,,Mose Frazier,CAR@SF 04:25PM ET,3000,0,,,,,,Austin Duke,CAR@SF 04:25PM ET,3000,0,,,,,,Damiere Byrd,CAR@SF 04:25PM ET,3000,0,,,,,,Trevor Graham,CAR@SF 04:25PM ET,3000,0,,,,,,Brenton Bersin,CAR@SF 04:25PM ET,3000,0,,,,,,Karel Hamilton,NYG@DAL 08:30PM ET,3000,0,,,,,,Brice Butler,NYG@DAL 08:30PM ET,3000,0,,,,,,Ryan Switzer,NYG@DAL 08:30PM ET,3000,0,,,,,,Noah Brown,NYG@DAL 08:30PM ET,3000,0,,,,,,Brian Brown,NYG@DAL 08:30PM ET,3000,0,,,,,,Uzoma Nwachukwu,NYG@DAL 08:30PM ET,3000,0,,,,,,Javontee Herndon,NYG@DAL 08:30PM ET,3000,0,,,,,,Lance Lenoir,NYG@DAL 08:30PM ET,3000,0,,,,,,C.J. Germany,NYG@DAL 08:30PM ET,3000,0,,,,,,Jerome Lane,NYG@DAL 08:30PM ET,3000,0,,,,,,Travis Rudolph,NYG@DAL 08:30PM ET,3000,0,,,,,,Kevin Snead,NYG@DAL 08:30PM ET,3000,0,,,,,,Keeon Johnson,NYG@DAL 08:30PM ET,3000,0,,,,,,Darius Powe,NYG@DAL 08:30PM ET,3000,0,,,,,,Kevin Norwood,NYG@DAL 08:30PM ET,3000,0,,,,,,Dwayne Harris,NYG@DAL 08:30PM ET,3000,0,,,,,,Marquis Bundy,NYG@DAL 08:30PM ET,3000,0,,,,,,Canaan Severin,NYG@DAL 08:30PM ET,3000,0,,,,,
