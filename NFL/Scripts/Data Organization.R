@@ -6,8 +6,8 @@
 ########################
 
 ## Import data of weekly scores, O/U's
-OU.2016 <- read.csv("data/2016_DonBest_VegasData_NFL_Week.csv")
-OU.2012_2015 <- read.csv("data/2012_2015_Final_DonbestData_NFL.csv")
+OU.2016 <- read.csv("NFL/data/2016_DonBest_VegasData_NFL_Week.csv")
+OU.2012_2015 <- read.csv("NFL/data/2012_2015_Final_DonbestData_NFL.csv")
 
 ## Keep only regular season games
 OU.2016 <- OU.2016[which(OU.2016$Regular.Season == 1),]
@@ -32,7 +32,7 @@ OU.2015 <- OU.2012_2015[which(OU.2012_2015$Year == 2015),]
 OU.2016 <- OU.2016[,c(1:11,15:17)]
 
 # Import players' weekly fantasy points data
-Fantasy.2016 <- read.csv("data/2016_NFL_Fantasy_Points.csv")
+Fantasy.2016 <- read.csv("NFL/data/2016_NFL_Fantasy_Points.csv")
 Fantasy.2016$First.Name <- as.character(Fantasy.2016$First.Name)
 Fantasy.2016$Last.Name <- as.character(Fantasy.2016$Last.Name)
 
@@ -179,7 +179,7 @@ Fantasy.2016$Initial.Last <- paste(substr(Fantasy.2016$First.Last, start = 1, st
                                    ". ", Fantasy.2016$Last.Name, sep = "")
 
 ## Import and clean injury data
-Injuries.2016 <- read.csv("data/merged_injuries_2016.csv")
+Injuries.2016 <- read.csv("NFL/data/merged_injuries_2016.csv")
 
 ## Convert Team column to character, change names of teams to match team-naming scheme of other
 ## datasets.

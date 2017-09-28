@@ -46,7 +46,7 @@ for (i in c(1:nrow(Top.QB.probs))) {
                                                                  Top.QB.probs$Player[i])])
   Top.QB.probs$Prob[i] <- length(Top.QB[which(Top.QB[,1] == i)])/iter
 }
-Top.QB.probs <- Top.QB.probs[order(Top.QB.probs$Prob,decreasing = T),]
+Top.QB.probs <- cbind(data.frame(Rank = 1:nrow(Top.QB.probs)), Top.QB.probs[order(Top.QB.probs$Prob,decreasing = T),])
 write.csv(Top.QB.probs, file = "NFL/TPPs/QB.csv", row.names = F)
 
 ### Running Back (RB)
@@ -75,7 +75,7 @@ for (i in c(1:nrow(Top.RB.probs))) {
                                                                               Top.RB.probs$Player[i])])
   Top.RB.probs$Prob[i] <- length(Top.RB[which(Top.RB[,1] == i)])/iter
 }
-Top.RB.probs <- Top.RB.probs[order(Top.RB.probs$Prob,decreasing = T),]
+Top.RB.probs <- cbind(data.frame(Rank = 1:nrow(Top.RB.probs)), Top.RB.probs[order(Top.RB.probs$Prob,decreasing = T),])
 write.csv(Top.RB.probs, file = "NFL/TPPs/RB.csv", row.names = F)
 
 ### Wide Receiver (WR)
@@ -104,7 +104,7 @@ for (i in c(1:nrow(Top.WR.probs))) {
                                                                               Top.WR.probs$Player[i])])
   Top.WR.probs$Prob[i] <- length(Top.WR[which(Top.WR[,1] == i)])/iter
 }
-Top.WR.probs <- Top.WR.probs[order(Top.WR.probs$Prob,decreasing = T),]
+Top.WR.probs <- cbind(data.frame(Rank = 1:nrow(Top.WR.probs)), Top.WR.probs[order(Top.WR.probs$Prob,decreasing = T),])
 write.csv(Top.WR.probs, file = "NFL/TPPs/WR.csv", row.names = F)
 
 ### Tight End (TE)
@@ -112,7 +112,8 @@ uniq.TE <- unique(DraftKings.players$Name[which(DraftKings.players$Pos == "TE")]
 samp.TE <- matrix(NA, nrow = iter, ncol = length(uniq.TE))
 colnames(samp.TE) <- uniq.TE
 for (i in c(1:length(uniq.TE))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.TE[i])),]
+  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.TE[i]) &
+                              Fantasy.2016$Pos == "TE"),]
   if (nrow(dat) > 1) {
     player.dens <- density(dat$DK.points)
     
@@ -133,5 +134,5 @@ for (i in c(1:nrow(Top.TE.probs))) {
                                                                               Top.TE.probs$Player[i])])
   Top.TE.probs$Prob[i] <- length(Top.TE[which(Top.TE[,1] == i)])/iter
 }
-Top.TE.probs <- Top.TE.probs[order(Top.TE.probs$Prob,decreasing = T),]
+Top.TE.probs <- cbind(data.frame(Rank = 1:nrow(Top.TE.probs)), Top.TE.probs[order(Top.TE.probs$Prob,decreasing = T),])
 write.csv(Top.TE.probs, file = "NFL/TPPs/TE.csv", row.names = F)
