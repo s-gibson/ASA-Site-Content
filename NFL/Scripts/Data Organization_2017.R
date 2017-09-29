@@ -232,10 +232,38 @@ Fantasy.2016$Initial.Last <- paste(substr(Fantasy.2016$First.Last, start = 1, st
 Fantasy.2016_2017 <- rbind(Fantasy.2016,Fantasy.2017)
 Team.2016_2017 <- rbind(Team.2016,Team.2017)
 
+## Add columns for number of data points (games) & total fantasy points in last 17 weeks for each player
+uniq.players <- unique(Fantasy.2016_2017[which(Fantasy.2016_2017$Year == 2017),c('First.Last','Team')])
+Fantasy.2016_2017$N_Current_team <- 0
+Fantasy.2016_2017$Current_team <- 0
+Fantasy.2016_2017$Cum.DKP <- 0
+Fantasy.2016_2017$Avg.DKP <- 0
+for (i in 1:nrow(uniq.players)) {
+  dat <- Fantasy.2016_2017[which(Fantasy.2016_2017$First.Last == uniq.players[i,1]),]
+  
+  Fantasy.2016_2017$N_Current_team[which(Fantasy.2016_2017$First.Last == uniq.players[i,1])] <- 
+    length(which(dat$Team == uniq.players[i,2]))
+  Fantasy.2016_2017$Current_team[which(Fantasy.2016_2017$First.Last == uniq.players[i,1] &
+                                         Fantasy.2016_2017$Team == uniq.players[i,2])] <- 1
+  Fantasy.2016_2017$Cum.DKP[which(Fantasy.2016_2017$First.Last == uniq.players[i,1])] <- 
+    sum(dat$DK.points, na.rm = T)
+  Fantasy.2016_2017$Avg.DKP[which(Fantasy.2016_2017$First.Last == uniq.players[i,1])] <- 
+    mean(dat$DK.points, na.rm = T)
+}
+
+
 ## Adjust names of certain players
 Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Odell BeckhamJr.")] <- "Odell Beckham Jr."
 Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Ted GinnJr.")] <- "Ted Ginn Jr."
 Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Todd Gurley")] <- "Todd Gurley II"
 
+## Keep only players who have scored at least N fantasy points in the last 17 weeks or have averaged
+## greater than A fantasy points in the last 17 weeks and have also played at least 3 weeks.
+Fantasy.2016_2017 <- Fantasy.2016_2017[which(
+  Fantasy.2016_2017$Cum.DKP > 30 | Fantasy.2016_2017$Avg.DKP > 10),]
 
+## Change classes
+Fantasy.2016_2017$Actual.Points <- as.numeric(Fantasy.2016_2017$Actual.Points)
+
+## Save data
 save(Fantasy.2016_2017,Team.2016_2017,file = "NFL/data/clean_data_2016_2017.RData")
