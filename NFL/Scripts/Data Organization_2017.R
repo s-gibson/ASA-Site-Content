@@ -232,4 +232,10 @@ Fantasy.2016$Initial.Last <- paste(substr(Fantasy.2016$First.Last, start = 1, st
 Fantasy.2016_2017 <- rbind(Fantasy.2016,Fantasy.2017)
 Team.2016_2017 <- rbind(Team.2016,Team.2017)
 
+## Adjust names of certain players
+Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Odell BeckhamJr.")] <- "Odell Beckham Jr."
+Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Ted GinnJr.")] <- "Ted Ginn Jr."
+Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Todd Gurley")] <- "Todd Gurley II"
+
+
 save(Fantasy.2016_2017,Team.2016_2017,file = "NFL/data/clean_data_2016_2017.RData")

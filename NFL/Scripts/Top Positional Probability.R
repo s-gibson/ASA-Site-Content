@@ -6,10 +6,10 @@
 ##################################
 
 ### Import data, separate into 2016 and 2015 datasets
-load("NFL/data/clean_data.RData")
+load("NFL/data/clean_data_2016_2017.RData")
 
 ### Create list of unique offensive players
-uniq.players <- unique(Fantasy.2016[which(Fantasy.2016$Pos != "Def"),c("First.Last","Team")])
+uniq.players <- unique(Fantasy.2016_2017[which(Fantasy.2016_2017$Pos != "Def"),c("First.Last","Team")])
                                                               
 ### Read in projected players .csv
 DraftKings.players <- read.csv("NFL/data/DraftKings.Lineup.csv")
@@ -25,7 +25,7 @@ uniq.QB <- unique(DraftKings.players$Name[which(DraftKings.players$Pos == "QB")]
 samp.QB <- matrix(NA, nrow = iter, ncol = length(uniq.QB))
 colnames(samp.QB) <- uniq.QB
 for (i in c(1:length(uniq.QB))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.QB[i])),]
+  dat <- Fantasy.2016_2017[which(Fantasy.2016_2017$First.Last == as.character(uniq.QB[i])),]
   if (nrow(dat) > 1) {
     player.dens <- density(dat$DK.points)
     
@@ -54,7 +54,7 @@ uniq.RB <- unique(DraftKings.players$Name[which(DraftKings.players$Pos == "RB")]
 samp.RB <- matrix(NA, nrow = iter, ncol = length(uniq.RB))
 colnames(samp.RB) <- uniq.RB
 for (i in c(1:length(uniq.RB))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.RB[i])),]
+  dat <- Fantasy.2016_2017[which(Fantasy.2016_2017$First.Last == as.character(uniq.RB[i])),]
   if (nrow(dat) > 1) {
     player.dens <- density(dat$DK.points)
     
@@ -83,7 +83,7 @@ uniq.WR <- unique(DraftKings.players$Name[which(DraftKings.players$Pos == "WR")]
 samp.WR <- matrix(NA, nrow = iter, ncol = length(uniq.WR))
 colnames(samp.WR) <- uniq.WR
 for (i in c(1:length(uniq.WR))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.WR[i])),]
+  dat <- Fantasy.2016_2017[which(Fantasy.2016_2017$First.Last == as.character(uniq.WR[i])),]
   if (nrow(dat) > 1) {
     player.dens <- density(dat$DK.points)
     
@@ -112,8 +112,8 @@ uniq.TE <- unique(DraftKings.players$Name[which(DraftKings.players$Pos == "TE")]
 samp.TE <- matrix(NA, nrow = iter, ncol = length(uniq.TE))
 colnames(samp.TE) <- uniq.TE
 for (i in c(1:length(uniq.TE))) {
-  dat <- Fantasy.2016[which(Fantasy.2016$First.Last == as.character(uniq.TE[i]) &
-                              Fantasy.2016$Pos == "TE"),]
+  dat <- Fantasy.2016_2017[which(Fantasy.2016_2017$First.Last == as.character(uniq.TE[i]) &
+                              Fantasy.2016_2017$Pos == "TE"),]
   if (nrow(dat) > 1) {
     player.dens <- density(dat$DK.points)
     
