@@ -21,7 +21,7 @@ for (i in 1:length(uniq.teams)) {
   
   ggplot(data = dat, aes(x = Actual.Points, y = DK.points, color = Initial.Last, group = First.Last)) +
     geom_point() +
-    geom_smooth(method = "lm",formula = y ~ poly(x,min(3,(most.current-1))),se = F) +
+    geom_smooth(method = "lm",formula = y ~ poly(x,max(1,(most.current-2))),se = F) +
     ylab("Fantasy Points") +
     xlab("Team Point Total") +
     ggtitle(paste(toupper(uniq.teams[i]), "Player Fantasy Points vs. Team Point Total", sep = " ")) +
@@ -33,7 +33,7 @@ for (i in 1:length(uniq.teams)) {
   
   ggplot(data = dat, aes(x = Spread, y = DK.points, color = Initial.Last, group = First.Last)) +
     geom_point() +
-    geom_smooth(method = "lm",formula = y ~ poly(x,min(3,(most.current-1))),se = F) +
+    geom_smooth(method = "lm",formula = y ~ poly(x,max(1,(most.current-2))),se = F) +
     ylab("Fantasy Points") +
     xlab("Game Spread") +
     ggtitle(paste(toupper(uniq.teams[i]), "Player Fantasy Points vs. Game Spread", sep = " ")) +
