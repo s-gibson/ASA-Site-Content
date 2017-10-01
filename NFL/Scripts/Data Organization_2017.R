@@ -257,6 +257,9 @@ Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Odell Beckha
 Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Ted GinnJr.")] <- "Ted Ginn Jr."
 Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Todd Gurley")] <- "Todd Gurley II"
 
+## Keep a full dataset, without removing players who have scored fewer than X fantasy points
+Fantasy.2016_2017.full <- Fantasy.2016_2017
+
 ## Keep only players who have scored at least N fantasy points in the last 17 weeks or have averaged
 ## greater than A fantasy points in the last 17 weeks and have also played at least 3 weeks.
 Fantasy.2016_2017 <- Fantasy.2016_2017[which(
@@ -266,4 +269,5 @@ Fantasy.2016_2017 <- Fantasy.2016_2017[which(
 Fantasy.2016_2017$Actual.Points <- as.numeric(Fantasy.2016_2017$Actual.Points)
 
 ## Save data
-save(Fantasy.2016_2017,Team.2016_2017,file = "NFL/data/clean_data_2016_2017.RData")
+save(Fantasy.2016_2017,Team.2016_2017,Fantasy.2016_2017.full,most.current,
+     file = "NFL/data/clean_data_2016_2017.RData")
