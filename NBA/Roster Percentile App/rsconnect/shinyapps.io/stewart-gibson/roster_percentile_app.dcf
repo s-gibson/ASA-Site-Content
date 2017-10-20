@@ -1,0 +1,12 @@
+name: roster_percentile_app
+title: Roster_Percentile_App
+username:
+account: stewart-gibson
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 225741
+bundleId: 1028767
+url: https://stewart-gibson.shinyapps.io/roster_percentile_app/
+when: 1508155255.54473
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,13 @@
+name: nfl_player_comparison_2017
+title: NFL Player Comparison 2017
+username:
+account: stewart-gibson
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 221718
+bundleId: 1016117
+url: https://stewart-gibson.shinyapps.io/nfl_player_comparison_2017/
+when: 1507474237.45491
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: clean_data.RData

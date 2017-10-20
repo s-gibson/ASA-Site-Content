@@ -5,8 +5,9 @@ account: stewart-gibson
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 211131
-bundleId: 979351
+bundleId: 1009732
 url: https://stewart-gibson.shinyapps.io/nfl_player_comparison_shiny_app/
-when: 1505267740.55378
+when: 1507084971.22924
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: clean_data.RData

@@ -5,7 +5,7 @@
 ##############################
 
 ## Set data's most current week
-most.current <- 3
+most.current <- 6
 
 ######################## 2017
 ## Import data of weekly scores, O/U's
@@ -271,3 +271,6 @@ Fantasy.2016_2017$Actual.Points <- as.numeric(Fantasy.2016_2017$Actual.Points)
 ## Save data
 save(Fantasy.2016_2017,Team.2016_2017,Fantasy.2016_2017.full,most.current,
      file = "NFL/data/clean_data_2016_2017.RData")
+
+save(Fantasy.2016_2017,Team.2016_2017,Fantasy.2016_2017.full,most.current,
+     file = "NFL/Shiny App/clean_data_2016_2017.RData")

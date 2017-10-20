@@ -6,6 +6,7 @@
 ##################################
 
 ### Import data, separate into 2016 and 2015 datasets
+#setwd("~/Documents/ASA/ASA Site Content")
 load("NFL/data/clean_data_2016_2017.RData")
 
 ### Create list of unique offensive players
