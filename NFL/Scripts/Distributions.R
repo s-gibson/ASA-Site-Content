@@ -82,12 +82,9 @@ for (i in 1:length(uniq.players)) {
     scale_y_continuous(limits = c(0, .2)) +
     ggtitle(paste(dat$First.Last[1], "DK Points Distribution", sep = " ")) +
     theme(plot.title = element_text(hjust = 0.5))
-  #ggsave(paste('Visualizations/Distributions/DK Points/',dat$First.Last[1],'.png', sep = ''))
   ggsave(paste('NFL/Visualizations/Distributions/By Position/DK Points/',
                dat$Pos[1],"/", dat$First.Last[1],'.png', sep = ''))
-  #ggsave(paste('Visualizations/Distributions/By Team/DK Points/',
-               #dat$Team[1], dat$First.Last[1],'.png', sep = ''))
-  
+
   ggplot(data = dat[which(dat$DK.salary > 0),]) +
     stat_density(aes(DK.salary), adjust = 0.5, color = col.set[2], fill = col.set[1], size = 1) +
     xlab("DK Salary") +
@@ -95,12 +92,9 @@ for (i in 1:length(uniq.players)) {
     scale_y_continuous(limits = c(0, 0.0015)) +
     ggtitle(paste(dat$First.Last[1], "DK Salary Distribution", sep = " ")) +
     theme(plot.title = element_text(hjust = 0.5))
-  #ggsave(paste('NFL/Visualizations/Distributions/Salary/',dat$First.Last[1],'.png', sep = ''))
-  ggsave(paste('NFL/Visualizations/Distributions/By Position/DKP per $1K/',
+  ggsave(paste('NFL/Visualizations/Distributions/By Position/Salary/',
                dat$Pos[1],"/", dat$First.Last[1],'.png', sep = ''))
-  #ggsave(paste('Visualizations/Distributions/By Team/DKP per $1K/',
-               #dat$Team[1], dat$First.Last[1],'.png', sep = ''))
-  
+
   ggplot(data = dat[which(dat$DK.salary > 0),]) +
     stat_density(aes(DK.points/(DK.salary/1000)), adjust = 0.5, color = col.set[2], fill = col.set[1], size = 1) +
     xlab("DK Points/$1K") +
@@ -108,10 +102,6 @@ for (i in 1:length(uniq.players)) {
     scale_y_continuous(limits = c(0, .75)) +
     ggtitle(paste(dat$First.Last[1], "DK Fantasy Points/$1K", sep = " ")) +
     theme(plot.title = element_text(hjust = 0.5))
-  #ggsave(paste('NFL/Visualizations/Distributions/DKP Per $1K/',dat$First.Last[1],'.png', sep = ''))
-  ggsave(paste('NFL/Visualizations/Distributions/By Position/Salary/',
+  ggsave(paste('NFL/Visualizations/Distributions/By Position/DKP per $1K/',
                dat$Pos[1],"/", dat$First.Last[1],'.png', sep = ''))
-  #ggsave(paste('Visualizations/Distributions/By Team/Salary/',
-               #dat$Team[1],"/", dat$First.Last[1],'.png', sep = ''))
-  
 }
