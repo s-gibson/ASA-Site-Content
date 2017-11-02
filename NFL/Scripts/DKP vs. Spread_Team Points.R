@@ -17,11 +17,11 @@ uniq.teams <- sort(unique(Fantasy.2016_2017$Team))
 for (i in 1:length(uniq.teams)) {
   dat <- Fantasy.2016_2017[which(Fantasy.2016_2017$Team == uniq.teams[i] &
                                    Fantasy.2016_2017$Current_team == 1 &
-                                   Fantasy.2016_2017$N_Current_team >= 3),]
+                                   Fantasy.2016_2017$N_Current_team >= 4),]
   
   ggplot(data = dat, aes(x = Actual.Points, y = DK.points, color = Initial.Last, group = First.Last)) +
     geom_point() +
-    geom_smooth(method = "lm",formula = y ~ poly(x,max(1,(most.current-2))),se = F) +
+    geom_smooth(se = F) +
     ylab("Fantasy Points") +
     xlab("Team Point Total") +
     ggtitle(paste(toupper(uniq.teams[i]), "Player Fantasy Points vs. Team Point Total", sep = " ")) +
@@ -33,7 +33,7 @@ for (i in 1:length(uniq.teams)) {
   
   ggplot(data = dat, aes(x = Spread, y = DK.points, color = Initial.Last, group = First.Last)) +
     geom_point() +
-    geom_smooth(method = "lm",formula = y ~ poly(x,max(1,(most.current-2))),se = F) +
+    geom_smooth(se = F) +
     ylab("Fantasy Points") +
     xlab("Game Spread") +
     ggtitle(paste(toupper(uniq.teams[i]), "Player Fantasy Points vs. Game Spread", sep = " ")) +

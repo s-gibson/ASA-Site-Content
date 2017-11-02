@@ -5,7 +5,7 @@
 ##############################
 
 ## Set data's most current week
-most.current <- 6
+most.current <- 8
 
 ######################## 2017
 ## Import data of weekly scores, O/U's
