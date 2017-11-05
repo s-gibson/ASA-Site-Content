@@ -61,6 +61,7 @@ for (i in c(1:nrow(Top.PG.probs))) {
                                                               Top.PG.probs$Player[i])]
   Top.PG.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
                                                                               Top.PG.probs$Player[i])])
+  Top.PG.probs$Matchup[i] <- unlist(strsplit(Top.PG.probs$Matchup[i], split = " "))[1]
   Top.PG.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
                                                                               Top.PG.probs$Player[i])]
   Top.PG.probs$Prob[i] <- length(Top.PG[which(Top.PG[,1] == i)])/iter
@@ -110,6 +111,7 @@ for (i in c(1:nrow(Top.SG.probs))) {
                                                               Top.SG.probs$Player[i])]
   Top.SG.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
                                                                               Top.SG.probs$Player[i])])
+  Top.SG.probs$Matchup[i] <- unlist(strsplit(Top.SG.probs$Matchup[i], split = " "))[1]
   Top.SG.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
                                                                      Top.SG.probs$Player[i])]
   Top.SG.probs$Prob[i] <- length(Top.SG[which(Top.SG[,1] == i)])/iter
@@ -159,6 +161,7 @@ for (i in c(1:nrow(Top.SF.probs))) {
                                                               Top.SF.probs$Player[i])]
   Top.SF.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
                                                                               Top.SF.probs$Player[i])])
+  Top.SF.probs$Matchup[i] <- unlist(strsplit(Top.SF.probs$Matchup[i], split = " "))[1]
   Top.SF.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
                                                                      Top.SF.probs$Player[i])]
   Top.SF.probs$Prob[i] <- length(Top.SF[which(Top.SF[,1] == i)])/iter
@@ -208,6 +211,7 @@ for (i in c(1:nrow(Top.PF.probs))) {
                                                               Top.PF.probs$Player[i])]
   Top.PF.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
                                                                               Top.PF.probs$Player[i])])
+  Top.PF.probs$Matchup[i] <- unlist(strsplit(Top.PF.probs$Matchup[i], split = " "))[1]
   Top.PF.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
                                                                      Top.PF.probs$Player[i])]
   Top.PF.probs$Prob[i] <- length(Top.PF[which(Top.PF[,1] == i)])/iter
@@ -257,6 +261,7 @@ for (i in c(1:nrow(Top.C.probs))) {
                                                               Top.C.probs$Player[i])]
   Top.C.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
                                                                               Top.C.probs$Player[i])])
+  Top.C.probs$Matchup[i] <- unlist(strsplit(Top.C.probs$Matchup[i], split = " "))[1]
   Top.C.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
                                                                      Top.C.probs$Player[i])]
   Top.C.probs$Prob[i] <- length(Top.C[which(Top.C[,1] == i)])/iter
