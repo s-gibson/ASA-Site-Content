@@ -12,7 +12,8 @@ load("NBA/data/NBA_2017.RData")
 DraftKings.players <- read.csv("NBA/data/DraftKings.players.csv")
 
 ### Keep only players who aren't "Out" (Injury == 2)
-DraftKings.players <- DraftKings.players[which(DraftKings.players$Injury != 2),]
+DraftKings.players$Injury[which(is.na(DraftKings.players$Injury))] <- 0
+DraftKings.players <- DraftKings.players[-which(DraftKings.players$Injury == 2),]
 
 ### Set all non-starters to 0
 DraftKings.players$Start[which(is.na(DraftKings.players$Start))] <- 0
@@ -53,13 +54,18 @@ for (i in c(1:iter)) {
   Top.PG[i,1] <- which.max(samp.PG[i,])
 }
 
-Top.PG.probs <- data.frame(Player = uniq.PG$Name, Matchup = NA, Salary = NA, Prob = NA)
+Top.PG.probs <- data.frame(Player = uniq.PG$Name, Matchup = NA, Salary = NA, Avg = NA, Prob = NA,
+                           Status = NA)
 for (i in c(1:nrow(Top.PG.probs))) {
-  # Top.PG.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
-  #                                                             Top.PG.probs$Player[i])]
-  # Top.PG.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
-  #                                                                             Top.PG.probs$Player[i])])
+  Top.PG.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
+                                                              Top.PG.probs$Player[i])]
+  Top.PG.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
+                                                                              Top.PG.probs$Player[i])])
+  Top.PG.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
+                                                                              Top.PG.probs$Player[i])]
   Top.PG.probs$Prob[i] <- length(Top.PG[which(Top.PG[,1] == i)])/iter
+  Top.PG.probs$Status[i] <- if(DraftKings.players$Injury[which(
+    DraftKings.players$Name == Top.PG.probs$Player[i])] == 1) {"GTD"} else {""}
 }
 Top.PG.probs <- cbind(data.frame(Rank = 1:nrow(Top.PG.probs)), Top.PG.probs[order(Top.PG.probs$Prob,decreasing = T),])
 write.csv(Top.PG.probs, file = "NBA/TPPs/PG.csv", row.names = F)
@@ -97,13 +103,18 @@ for (i in c(1:iter)) {
   Top.SG[i,1] <- which.max(samp.SG[i,])
 }
 
-Top.SG.probs <- data.frame(Player = uniq.SG$Name, Matchup = NA, Salary = NA, Prob = NA)
+Top.SG.probs <- data.frame(Player = uniq.SG$Name, Matchup = NA, Salary = NA, Avg = NA, Prob = NA,
+                           Status = NA)
 for (i in c(1:nrow(Top.SG.probs))) {
-  # Top.SG.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
-  #                                                             Top.SG.probs$Player[i])]
-  # Top.SG.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
-  #                                                                             Top.SG.probs$Player[i])])
+  Top.SG.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
+                                                              Top.SG.probs$Player[i])]
+  Top.SG.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
+                                                                              Top.SG.probs$Player[i])])
+  Top.SG.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
+                                                                     Top.SG.probs$Player[i])]
   Top.SG.probs$Prob[i] <- length(Top.SG[which(Top.SG[,1] == i)])/iter
+  Top.SG.probs$Status[i] <- if(DraftKings.players$Injury[which(
+    DraftKings.players$Name == Top.SG.probs$Player[i])] == 1) {"GTD"} else {""}
 }
 Top.SG.probs <- cbind(data.frame(Rank = 1:nrow(Top.SG.probs)), Top.SG.probs[order(Top.SG.probs$Prob,decreasing = T),])
 write.csv(Top.SG.probs, file = "NBA/TPPs/SG.csv", row.names = F)
@@ -141,13 +152,18 @@ for (i in c(1:iter)) {
   Top.SF[i,1] <- which.max(samp.SF[i,])
 }
 
-Top.SF.probs <- data.frame(Player = uniq.SF$Name, Matchup = NA, Salary = NA, Prob = NA)
+Top.SF.probs <- data.frame(Player = uniq.SF$Name, Matchup = NA, Salary = NA, Avg = NA, Prob = NA,
+                           Status = NA)
 for (i in c(1:nrow(Top.SF.probs))) {
-  # Top.SF.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
-  #                                                             Top.SF.probs$Player[i])]
-  # Top.SF.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
-  #                                                                             Top.SF.probs$Player[i])])
+  Top.SF.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
+                                                              Top.SF.probs$Player[i])]
+  Top.SF.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
+                                                                              Top.SF.probs$Player[i])])
+  Top.SF.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
+                                                                     Top.SF.probs$Player[i])]
   Top.SF.probs$Prob[i] <- length(Top.SF[which(Top.SF[,1] == i)])/iter
+  Top.SF.probs$Status[i] <- if(DraftKings.players$Injury[which(
+    DraftKings.players$Name == Top.SF.probs$Player[i])] == 1) {"GTD"} else {""}
 }
 Top.SF.probs <- cbind(data.frame(Rank = 1:nrow(Top.SF.probs)), Top.SF.probs[order(Top.SF.probs$Prob,decreasing = T),])
 write.csv(Top.SF.probs, file = "NBA/TPPs/SF.csv", row.names = F)
@@ -185,13 +201,18 @@ for (i in c(1:iter)) {
   Top.PF[i,1] <- which.max(samp.PF[i,])
 }
 
-Top.PF.probs <- data.frame(Player = uniq.PF$Name, Matchup = NA, Salary = NA, Prob = NA)
+Top.PF.probs <- data.frame(Player = uniq.PF$Name, Matchup = NA, Salary = NA, Avg = NA, Prob = NA,
+                           Status = NA)
 for (i in c(1:nrow(Top.PF.probs))) {
-  # Top.PF.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
-  #                                                             Top.PF.probs$Player[i])]
-  # Top.PF.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
-  #                                                                             Top.PF.probs$Player[i])])
+  Top.PF.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
+                                                              Top.PF.probs$Player[i])]
+  Top.PF.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
+                                                                              Top.PF.probs$Player[i])])
+  Top.PF.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
+                                                                     Top.PF.probs$Player[i])]
   Top.PF.probs$Prob[i] <- length(Top.PF[which(Top.PF[,1] == i)])/iter
+  Top.PF.probs$Status[i] <- if(DraftKings.players$Injury[which(
+    DraftKings.players$Name == Top.PF.probs$Player[i])] == 1) {"GTD"} else {""}
 }
 Top.PF.probs <- cbind(data.frame(Rank = 1:nrow(Top.PF.probs)), Top.PF.probs[order(Top.PF.probs$Prob,decreasing = T),])
 write.csv(Top.PF.probs, file = "NBA/TPPs/PF.csv", row.names = F)
@@ -229,14 +250,18 @@ for (i in c(1:iter)) {
   Top.C[i,1] <- which.max(samp.C[i,])
 }
 
-Top.C.probs <- data.frame(Player = uniq.C$Name, Matchup = NA, Salary = NA, Prob = NA)
+Top.C.probs <- data.frame(Player = uniq.C$Name, Matchup = NA, Salary = NA, Avg = NA, Prob = NA,
+                           Status = NA)
 for (i in c(1:nrow(Top.C.probs))) {
-  # Top.C.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
-  #                                                             Top.C.probs$Player[i])]
-  # Top.C.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
-  #                                                                             Top.C.probs$Player[i])])
+  Top.C.probs$Salary[i] <- DraftKings.players$Salary[which(DraftKings.players$Name ==
+                                                              Top.C.probs$Player[i])]
+  Top.C.probs$Matchup[i] <- as.character(DraftKings.players$GameInfo[which(DraftKings.players$Name ==
+                                                                              Top.C.probs$Player[i])])
+  Top.C.probs$Avg[i] <- DraftKings.players$AvgPointsPerGame[which(DraftKings.players$Name ==
+                                                                     Top.C.probs$Player[i])]
   Top.C.probs$Prob[i] <- length(Top.C[which(Top.C[,1] == i)])/iter
+  Top.C.probs$Status[i] <- if(DraftKings.players$Injury[which(
+    DraftKings.players$Name == Top.C.probs$Player[i])] == 1) {"GTD"} else {""}
 }
 Top.C.probs <- cbind(data.frame(Rank = 1:nrow(Top.C.probs)), Top.C.probs[order(Top.C.probs$Prob,decreasing = T),])
 write.csv(Top.C.probs, file = "NBA/TPPs/C.csv", row.names = F)
-
