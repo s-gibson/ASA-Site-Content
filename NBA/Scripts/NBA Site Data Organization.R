@@ -7,6 +7,7 @@
 
 ### Import data
 NBA_17 <- read.csv("NBA/data/nba_2017_to_date.csv")
+NBA_17$First..Last <- as.character(NBA_17$First..Last)
 
 ## Assign more descriptive positions to players
 NBA_17$DK.pos <- as.character(NBA_17$DK.pos)

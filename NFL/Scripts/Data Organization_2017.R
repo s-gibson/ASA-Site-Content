@@ -256,7 +256,7 @@ for (i in 1:nrow(uniq.players)) {
 Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Odell BeckhamJr.")] <- "Odell Beckham Jr."
 Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Ted GinnJr.")] <- "Ted Ginn Jr."
 Fantasy.2016_2017$First.Last[which(Fantasy.2016_2017$First.Last == "Todd Gurley")] <- "Todd Gurley II"
-
+Fantasy.2016_2017$First.Last[which(grepl("Will Fuller",Fantasy.2016_2017$First.Last))] <- "Will Fuller V"
 ## Keep a full dataset, without removing players who have scored fewer than X fantasy points
 Fantasy.2016_2017.full <- Fantasy.2016_2017
 
@@ -267,6 +267,13 @@ Fantasy.2016_2017 <- Fantasy.2016_2017[which(
 
 ## Change classes
 Fantasy.2016_2017$Actual.Points <- as.numeric(Fantasy.2016_2017$Actual.Points)
+
+## Remove insignifficant players who have the same name as significant players
+Fantasy.2016_2017 <- Fantasy.2016_2017[-which(Fantasy.2016_2017$First.Last == "David Johnson" &
+                                                Fantasy.2016_2017$Pos == "TE"),]
+Fantasy.2016_2017 <- Fantasy.2016_2017[-which(Fantasy.2016_2017$First.Last == "Chris Thompson" &
+                                                Fantasy.2016_2017$Pos == "WR"),]
+
 
 ## Save data
 save(Fantasy.2016_2017,Team.2016_2017,Fantasy.2016_2017.full,most.current,
